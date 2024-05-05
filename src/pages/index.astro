@@ -1,32 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import { ReactComponentTest } from '../components/ReactComponentTest';
-import { css } from '../../styled-system/css';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { ReactComponentTest } from "../components/ReactComponentTest";
+import { css } from "../../styled-system/css";
 import "../index.css";
 ---
 
 <Layout title="ScombZ Utilities">
-	<main>
-		<div class={css({ fontSize: "2xl", fontWeight: 'bold' })}>Hello !</div>
-		<img src="/shibaneko.webp"	alt="Shiba Inu" />
-		<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		<ReactComponentTest />
-	</main>
+  <main>
+    <div class={css({ fontSize: "2xl", fontWeight: "bold" })}>Hello !</div>
+    <img src="/shibaneko.webp" alt="しばねこ" />
+    <Card
+      href="https://astro.build/chat/"
+      title="Community"
+      body="Come say hi to our amazing Discord community. ❤️"
+    />
+    <ReactComponentTest />
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: #000;
-		font-size: 20px;
-		line-height: 1.6;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: #000;
+    font-size: 20px;
+    line-height: 1.6;
+  }
 </style>

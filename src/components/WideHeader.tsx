@@ -51,6 +51,17 @@ export const WideHeader = () => {
               width: "fit-content",
             })}
           >
+            ホーム
+          </a>
+          <a
+            href="/"
+            className={css({
+              color: "black",
+              textDecoration: "none",
+              display: "block",
+              width: "fit-content",
+            })}
+          >
             更新情報
           </a>
           <a
@@ -73,7 +84,7 @@ export const WideHeader = () => {
               width: "fit-content",
             })}
           >
-            要望・バグ報告
+            要望
           </a>
         </div>
         <a
