@@ -1,32 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import { ReactComponentTest } from "../components/ReactComponentTest";
+import TopView from "../components/TopView.astro";
 import { css } from "../../styled-system/css";
 import "../index.css";
 ---
 
 <Layout title="ScombZ Utilities">
   <main>
-    <div class={css({ fontSize: "2xl", fontWeight: "bold" })}>Hello !</div>
-    <img src="/shibaneko.webp" alt="しばねこ" />
-    <Card
-      href="https://astro.build/chat/"
-      title="Community"
-      body="Come say hi to our amazing Discord community. ❤️"
-    />
-    <ReactComponentTest />
+    <div
+      class={css({
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "calc(100vh - 120px)",
+        width: "100%",
+      })}
+    >
+      <TopView />
+    </div>
   </main>
-</Layout>
 
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: #000;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-</style>
+  <style>
+    main {
+      margin: auto;
+      padding: 1rem;
+      width: 100%;
+      max-width: calc(100% - 2rem);
+      color: #000;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,79 @@
+---
+import { css } from "../../styled-system/css";
+import { FaChrome, FaFirefox, FaEdge } from "react-icons/fa";
+
+const hrefs = {
+  chrome:
+    "https://chrome.google.com/webstore/detail/scombz-utilities/iejnanaabfgocfjbnmhkfheghbkanibj",
+  firefox: "https://addons.mozilla.org/ja/firefox/addon/scombz-utilities/",
+  edge: "https://chrome.google.com/webstore/detail/scombz-utilities/iejnanaabfgocfjbnmhkfheghbkanibj",
+};
+
+const browsers = [
+  { name: "Chrome", href: hrefs.chrome, icon: FaChrome },
+  { name: "FireFox", href: hrefs.firefox, icon: FaFirefox },
+  { name: "Edge", href: hrefs.edge, icon: FaEdge },
+];
+---
+
+<div
+  class={css({
+    display: "flex",
+    gap: 3,
+    justifyContent: "center",
+    flexDirection: "column",
+  })}
+>
+  {
+    browsers.map((browser) => (
+      <a href={browser.href}>
+        <div
+          class={css({
+            width: "100%",
+            maxWidth: 600,
+            mx: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 2,
+            borderRadius: 4,
+            color: "{colors.cyan.800}",
+            border: "1px solid {colors.cyan.800}",
+            gap: 3,
+            cursor: "pointer",
+            userSelect: "none",
+            "&:hover": {
+              border: "1px solid {colors.cyan.600}",
+              color: "{colors.cyan.600}",
+            },
+          })}
+          id={browser.name}
+        >
+          <browser.icon size={24} />
+          Install for {browser.name}
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .now-browser {
+    background-color: "{colors.cyan.800} !important";
+    color: "{colors.white} !important";
+  }
+</style>
+
+<script>
+  const ua = navigator.userAgent;
+  const isChrome = ua.indexOf("Chrome") > -1;
+  const isFirefox = ua.indexOf("Firefox") > -1;
+  const isEdge = ua.indexOf("Edg") > -1;
+  if (isChrome) {
+    document.getElementById("Chrome")?.classList.add("now-browser");
+  } else if (isFirefox) {
+    document.getElementById("FireFox")?.classList.add("now-browser");
+  } else if (isEdge) {
+    document.getElementById("Edge")?.classList.add("now-browser");
+  }
+</script>

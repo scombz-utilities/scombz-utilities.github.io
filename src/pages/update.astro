@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopView from "../components/TopView.astro";
+import { css } from "../../styled-system/css";
+import { releaseNote } from "../releaseNote";
+import "../index.css";
+---
+
+<Layout title="ScombZ Utilities">
+  <main>
+    <div
+      class={css({
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+      })}
+    >
+      {
+        releaseNote.map((note) => (
+          <div
+            class={css({
+              width: "100%",
+              marginBottom: "1rem",
+              padding: "1rem",
+              border: "1px solid #000",
+            })}
+          >
+            <h2 class={css({ fontSize: "150%", color: "red" })}>
+              {note.version}
+            </h2>
+            <ul>
+              {note.contents.map((n) => (
+                <li>{n.title}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <style>
+      main {
+        margin: auto;
+        padding: 1rem;
+        width: 100%;
+        max-width: calc(100% - 2rem);
+        color: #000;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+    </style>
+  </main>
+</Layout>

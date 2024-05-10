@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { css } from "../../styled-system/css";
+import "../index.css";
+---
+
+<Layout title="ScombZ Utilities">
+  <main>
+    <h2
+      class={css({
+        fontSize: "2xl",
+        fontWeight: "bold",
+        textAlign: "center",
+        my: 10,
+      })}
+    >
+      プライバシーポリシー
+    </h2>
+    <div>
+      <p>
+        ScombZ Utilities開発チーム（以下，「当団体」といいます。）は，
+        ブラウザ拡張機能サービス（以下,「本サービス」といいます。）におけるユーザーの個人情報の取扱いについて，
+        以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+      </p>
+      <h6
+        class={css({
+          textAlign: "center",
+          fontWeight: "bold",
+        })}
+      >
+        第1条（個人情報）
+      </h6>
+      <p>
+        「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，
+        生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，
+        連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，
+        及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
+      </p>
+      <h6 class={css({ textAlign: "center", fontWeight: "bold" })}>
+        第2条（個人情報の収集）
+      </h6>
+      <p>
+        当団体は，ユーザーが拡張機能を利用する際に，より広い機能提供のために
+        学籍番号，学部などの個人情報をお尋ねすることがありますが，
+        全てのデータをローカル上に保存しいかなるサーバーへも送信しません。
+        また，それらは必要に応じて入力を拒否することができます。
+      </p>
+      <h6 class={css({ textAlign: "center", fontWeight: "bold" })}>
+        第3条（個人情報を利用する目的）
+      </h6>
+      <p>当団体が個人情報を利用する目的は，以下のとおりです。</p>
+      <p>一部機能の利用に必要な情報を取得するため。</p>
+      <h6 class={css({ textAlign: "center", fontWeight: "bold" })}>
+        第4条（利用目的の変更）
+      </h6>
+      <p>
+        当団体は，利用目的が変更前と関連性を有すると合理的に認められる場合に限り，
+        個人情報の利用目的を変更するものとします。
+      </p>
+      <p>
+        利用目的の変更を行った場合には，変更後の目的について，当団体所定の方法により，ユーザーに通知し，または本ウェブサイト上に公表するものとします。
+      </p>
+      <h6 class={css({ textAlign: "center", fontWeight: "bold" })}>
+        第5条（お問い合わせ窓口）
+      </h6>
+      <p>
+        個人情報の取扱いに関するお問い合わせは，下記の窓口までお願いいたします。
+      </p>
+      <p>Eメールアドレス： scombzutilities@gmail.com</p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: #000;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
+</style>

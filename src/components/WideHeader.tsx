@@ -43,18 +43,7 @@ export const WideHeader = () => {
       >
         <div className={css({ display: "flex", gap: 5, alignItems: "center" })}>
           <a
-            href="/"
-            className={css({
-              color: "black",
-              textDecoration: "none",
-              display: "block",
-              width: "fit-content",
-            })}
-          >
-            ホーム
-          </a>
-          <a
-            href="/"
+            href="/update"
             className={css({
               color: "black",
               textDecoration: "none",
@@ -65,7 +54,7 @@ export const WideHeader = () => {
             更新情報
           </a>
           <a
-            href="/"
+            href="/about"
             className={css({
               color: "black",
               textDecoration: "none",
@@ -73,10 +62,21 @@ export const WideHeader = () => {
               width: "fit-content",
             })}
           >
-            使い方
+            機能
           </a>
           <a
-            href="/"
+            href="/privacy_policy"
+            className={css({
+              color: "black",
+              textDecoration: "none",
+              display: "block",
+              width: "fit-content",
+            })}
+          >
+            プライバシーポリシー
+          </a>
+          <a
+            href="/request"
             className={css({
               color: "black",
               textDecoration: "none",
@@ -88,7 +88,7 @@ export const WideHeader = () => {
           </a>
         </div>
         <a
-          href="/#install"
+          href="/"
           className={css({
             color: "white",
             background: "black",
