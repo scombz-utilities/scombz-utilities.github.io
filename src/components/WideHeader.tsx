@@ -30,7 +30,7 @@ export const WideHeader = () => {
             width: "fit-content",
           })}
         >
-          ScombZ Utilies
+          ScombZ Utilities
         </h1>
       </a>
       <div
