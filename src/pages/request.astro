@@ -8,14 +8,50 @@ import "../index.css";
   <main>
     <div
       class={css({
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "calc(100vh - 120px)",
+        textAlign: "center",
+        height: "calc(100vh - 350px)",
         width: "100%",
       })}
     >
-      request
+      <h1
+        class={css({
+          fontSize: "2rem",
+          fontWeight: "bold",
+          my: 10,
+        })}
+      >
+        バグ報告・リクエスト
+      </h1>
+      <p>バグ報告、リクエストは以下のいずれかの方法でお知らせください。</p>
+      <ul
+        class={css({
+          listStyle: "inside",
+          padding: 0,
+          margin: 0,
+          gap: "1rem",
+        })}
+      >
+        <li>
+          <a
+            class={css({
+              color: "{colors.indigo.700}",
+              textDecoration: "underline",
+            })}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeahBs8kcBB2dVmVA54KIIOxa4DKUE8v4a1E30ncawd9W4vjg/viewform"
+            >Google Form</a
+          >
+        </li>
+        <li>
+          <a
+            class={css({
+              color: "{colors.indigo.700}",
+              textDecoration: "underline",
+            })}
+            href="https://github.com/scombz-utilities/scombz-utilities-react/issues"
+            >GitHub Issues</a
+          >
+        </li>
+      </ul>
     </div>
   </main>
 
