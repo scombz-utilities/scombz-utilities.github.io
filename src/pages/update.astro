@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import TopView from "../components/TopView.astro";
+import { format } from "date-fns";
 import { css } from "../../styled-system/css";
-import { releaseNote } from "../releaseNote";
+import { legacyReleaseNote } from "../releaseNote";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import "../index.css";
 ---
 
@@ -17,28 +18,7 @@ import "../index.css";
         width: "100%",
       })}
     >
-      {
-        releaseNote.map((note) => (
-          <div
-            class={css({
-              width: "100%",
-              marginBottom: "1rem",
-              padding: "1rem",
-              border: "1px solid #000",
-            })}
-          >
-            <h2 class={css({ fontSize: "150%", color: "red" })}>
-              {note.version}
-            </h2>
-            <ul>
-              {note.contents.map((n) => (
-                <li>{n.title}</li>
-                <li>{n.explain}</li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      アップデートされました！
     </div>
 
     <style>

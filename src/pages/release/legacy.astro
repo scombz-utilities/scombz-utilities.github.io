@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { format } from "date-fns";
+import { css } from "../../../styled-system/css";
+import { legacyReleaseNote } from "../../releaseNote";
+import "../../index.css";
+---
+
+<Layout title="ScombZ Utilities">
+  <main>
+    <div
+      class={css({
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+      })}
+    >
+      <h1
+        class={css({
+          fontSize: "150%",
+          fontWeight: "bold",
+          textAlign: "center",
+          mt: "2rem",
+          mb: "1rem",
+        })}
+      >
+        ScombZ Utilities リリースノート (〜ver 3.23.3)
+      </h1>
+
+      <a
+        href="/release/"
+        class={css({
+          color: "{colors.indigo.700}",
+          textDecoration: "underline",
+          marginBottom: "1rem",
+        })}>最新版 (ver 4.0.0~)のリリースノートへ戻る</a
+      >
+      {
+        legacyReleaseNote.map((note) => (
+          <div
+            class={css({
+              width: "100%",
+              px: "1rem",
+              pb: "2rem",
+              mt: "2rem",
+              borderBottom: "1px solid #ccc",
+            })}
+          >
+            <h2 class={css({ fontSize: "110%" })}>ver. {note.version}</h2>
+            <p
+              class={css({
+                fontSize: "90%",
+                color: "#666",
+              })}
+            >
+              {format(new Date(note.date.chrome), "yyyy-MM-dd")}
+            </p>
+            <div>
+              {note.contents.map((n) => (
+                <>
+                  <h4
+                    class={css({
+                      fontSize: "100%",
+                      mt: "1rem",
+                    })}
+                  >
+                    {n.title}
+                  </h4>
+
+                  <p
+                    class={css({
+                      px: ".5rem",
+                      fontSize: "90%",
+                    })}
+                  >
+                    {n.explain}
+                  </p>
+                </>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <style>
+      main {
+        margin: auto;
+        padding: 1rem;
+        width: 100%;
+        max-width: calc(100% - 2rem);
+        color: #000;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+    </style>
+  </main>
+</Layout>

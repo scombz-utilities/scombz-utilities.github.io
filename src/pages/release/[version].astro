@@ -1,0 +1,63 @@
+---
+import { releaseNotes, type ReleaseNote } from "../../releaseNote";
+import Layout from "../../layouts/Layout.astro";
+import { css } from "../../../styled-system/css";
+import { format } from "date-fns";
+import "../../index.css";
+
+export const getStaticPaths = () => {
+  return releaseNotes.map((releaseNote) => {
+    return {
+      params: {
+        version: releaseNote.version,
+      },
+    };
+  });
+};
+
+const releaseNote = releaseNotes.find(
+  (releaseNote) => releaseNote.version === Astro.params.version,
+) as ReleaseNote;
+
+const { version } = Astro.params;
+---
+
+<Layout title={`リリースノート ${version}`}>
+  <div class={css({ padding: 4 })}>
+    <h1 class={css({ padding: 2, fontSize: "150%", mb: 0 })}>
+      ScombZ Utilities ver.{version} - リリースノート
+    </h1>
+    <div class={css({ px: 4 })}>
+      <p>
+        Chrome: {format(releaseNote.date.chrome, "yyyy/MM/dd")}
+      </p>
+      <p>
+        FireFox: {format(releaseNote.date.firefox, "yyyy/MM/dd")}
+      </p>
+    </div>
+    <div class={css({ px: 4 })}>
+      <h2
+        class={css({
+          fontSize: "120%",
+          my: 3,
+        })}
+      >
+        変更点
+      </h2>
+      <ul>
+        {
+          releaseNote.contents.map((change) => (
+            <div class={css({ py: 2 })}>
+              <h3
+                class={css({ fontSize: "110%", textDecoration: "underline" })}
+              >
+                {change.title}
+              </h3>
+              <p class={css({ p: 2 })}>{change.explain}</p>
+            </div>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Layout>

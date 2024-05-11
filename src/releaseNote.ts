@@ -1,4 +1,46 @@
-export const releaseNote = [
+export type ReleaseNote = {
+  version: string;
+  date: {
+    firefox: string;
+    chrome: string;
+  };
+  contents: {
+    genre: "feature" | "optimization" | "fix" | "security";
+    title: string;
+    explain: string;
+  }[];
+};
+export const releaseNotes: ReleaseNote[] = [
+  {
+    version: "4.0.0",
+    date: {
+      firefox: "2024/6/10",
+      chrome: "2024/6/10",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "アップデート機能の追加",
+        explain:
+          "アップデートがあると通知が来るようになりました。また、アップデートの確認を手動で行うこともできます。",
+      },
+      {
+        genre: "feature",
+        title: "アップデート情報の表示",
+        explain:
+          "アップデート情報が表示されるようになりました。アップデート情報は公式サイトから取得されます。",
+      },
+      {
+        genre: "feature",
+        title: "アップデート情報の表示",
+        explain:
+          "アップデート情報が表示されるようになりました。アップデート情報は公式サイトから取得されます。",
+      },
+    ],
+  },
+];
+
+export const legacyReleaseNote = [
   {
     version: "3.23.3",
     date: {
@@ -45,30 +87,6 @@ export const releaseNote = [
         title: "ファイルの一括ダウンロード機能におけるバグを修正しました",
         explain:
           "ファイルの一括ダウンロード機能において、回ごとでのダウンロードで本来ダウンロードできないものをダウンロード仕様とすることにより動作が途中で止まることがある問題を修正しました。",
-      },
-      {
-        genre: "notification",
-        title: "3.23.0の内容と同じです",
-        explain:
-          "[Chrome限定]科目詳細ページ内において、配布されているすべてのpdfファイルをZIP形式に圧縮し一括でダウンロードする機能を追加しました。また、各回ごとにダウンロードすることもでき、こちらはpdfに限定されません。",
-      },
-      {
-        genre: "notification",
-        title: "3.23.0の内容と同じです",
-        explain:
-          "ScombZ上でテストを受ける際、ScombZ Utilitiesが目立たないようになる設定を追加しました(テスト受験中の時間割・課題一覧表示)。時間割、課題一覧、画面上部のアイコン、拡張機能設定へのリンクが一時的に非表示になります。",
-      },
-      {
-        genre: "notification",
-        title: "3.22.0の内容と同じです",
-        explain:
-          "違う年度のシラバスが開かれる問題を修正しました。テスト提出時にタイマー横の提出ボタンをクリックすると確認画面が出る問題を修正しました。URLをハイパーリンクに置換する機能がうまく動かないことがある問題を修正しました。",
-      },
-      {
-        genre: "notification",
-        title: "3.22.0の内容と同じです",
-        explain:
-          "アップデート時、公式サイトがバックグラウンドで開くように変更しました。LMSページにおいて、ホイールクリック時にページをバックグラウンドで開くように変更しました。",
       },
     ],
   },
