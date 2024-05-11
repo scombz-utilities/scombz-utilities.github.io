@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { css } from "../../styled-system/css";
+import "../index.css";
+---
+
+<Layout title="ScombZ Utilities">
+  <main>
+    <div
+      class={css({
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "calc(100vh - 120px)",
+        width: "100%",
+      })}
+    >
+      request
+    </div>
+  </main>
+
+  <style>
+    main {
+      margin: auto;
+      padding: 1rem;
+      width: 100%;
+      max-width: calc(100% - 2rem);
+      color: #000;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</Layout>

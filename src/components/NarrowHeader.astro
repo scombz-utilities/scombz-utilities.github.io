@@ -3,7 +3,6 @@ import { css } from "../../styled-system/css";
 import { LuMenu } from "react-icons/lu";
 ---
 
-
 <div
   class={css({
     position: "sticky",
@@ -23,10 +22,7 @@ import { LuMenu } from "react-icons/lu";
     },
   })}
 >
-  <a
-    href="/"
-    class={css({ width: "fit-content", display: "block", ml: 3 })}
-  >
+  <a href="/" class={css({ width: "fit-content", display: "block", ml: 3 })}>
     <h1
       class={css({
         fontSize: "20px",
@@ -49,26 +45,29 @@ import { LuMenu } from "react-icons/lu";
   >
     <LuMenu />
   </div>
-  <div id="menu" class={css({
-      display: "none", 
-      position: "fixed", 
-      top: "58px", 
-      left: 0, 
-      width: "100%", 
-      height: "calc(100svh - 58px)", 
-      background: "#fffd", 
+  <div
+    id="menu"
+    class={css({
+      display: "none",
+      position: "fixed",
+      top: "58px",
+      left: 0,
+      width: "100%",
+      height: "calc(100svh - 58px)",
+      background: "#fffd",
       backdropFilter: "blur(10px)",
-      zIndex: 99, 
-      justifyContent: "flex-start", 
-      alignItems: "center", 
+      zIndex: 99,
+      justifyContent: "flex-start",
+      alignItems: "center",
       flexDirection: "column",
       gap: 8,
       padding: 8,
-    })}>
+    })}
+  >
     <a href="/">ホーム</a>
-    <a href="/">更新情報</a>
-    <a href="/">使い方</a>
-    <a href="/">要望・バグ報告</a>
+    <a href="/update">更新情報</a>
+    <a href="/about">機能</a>
+    <a href="/request">要望</a>
   </div>
 </div>
 
@@ -83,4 +82,3 @@ import { LuMenu } from "react-icons/lu";
     }
   });
 </script>
-
