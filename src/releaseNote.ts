@@ -20,21 +20,39 @@ export const releaseNotes: ReleaseNote[] = [
     contents: [
       {
         genre: "feature",
-        title: "アップデート機能の追加",
+        title: "ウィジェット機能の大幅な変更",
         explain:
-          "アップデートがあると通知が来るようになりました。また、アップデートの確認を手動で行うこともできます。",
+          "ウィジェット機能を大幅に改善しました。1つ1つをモダンなUXで再実装し、ウィジェットの種類が増え、ウィジェットの設定ができるようになりました。 バス時刻表や、リンク、カレンダーなどが追加されました。",
       },
       {
         genre: "feature",
-        title: "アップデート情報の表示",
+        title: "設定画面・ポップアップの再実装",
         explain:
-          "アップデート情報が表示されるようになりました。アップデート情報は公式サイトから取得されます。",
+          "設定画面およびポップアップを再実装し、より使いUI/UXになりました。",
       },
       {
         genre: "feature",
-        title: "アップデート情報の表示",
+        title: "ログインの自動化",
         explain:
-          "アップデート情報が表示されるようになりました。アップデート情報は公式サイトから取得されます。",
+          "未ログイン状態で表示される「学生ログイン」やADFS二段階認証確認画面の「次へ」ボタンを自動でクリックするだけでなく、ログイン情報を保存することで学籍番号やパスワードを自動で入力します。",
+      },
+      {
+        genre: "feature",
+        title: "右クリック/ホイールクリックの実装",
+        explain:
+          "LMSページ内の科目ボタン、科目別ページのダウンロードリンクなど、右クリックが通常できないリンクを通常のリンクと同じようにサポートします。",
+      },
+      {
+        genre: "feature",
+        title: "大規模なリファクタリング",
+        explain:
+          "コードの大規模なリファクタリングを行い、パフォーマンスの向上とメンテナンス性の向上を図りました。",
+      },
+      {
+        genre: "feature",
+        title: "English Support",
+        explain:
+          "You can now use ScombZ Utilities in English. The language is automatically set according to the language settings of your browser. Some parts of the UI are still in Japanese, but we are working to improve this.",
       },
     ],
   },
