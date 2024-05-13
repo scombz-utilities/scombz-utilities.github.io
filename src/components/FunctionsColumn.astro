@@ -38,11 +38,12 @@ const { title, description, image, direction = "left" } = Astro.props;
   }
   <div
     class={css({
-      px: "2rem",
+      px: "1rem",
       py: "1rem",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
+      md: { px: "2rem" },
     })}
   >
     <h2
