@@ -142,7 +142,8 @@ export const FunctionsTile = () => {
           xl: {
             gridTemplateColumns: "repeat(3, 1fr)",
           },
-          rowGap: 3,
+          rowGap: 2,
+          columnGap: 3,
         })}
       >
         {functionCards.map((card, idx) => (
