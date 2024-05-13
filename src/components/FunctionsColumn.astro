@@ -15,7 +15,8 @@ const { title, description, image, direction = "left" } = Astro.props;
 <div
   class={css({
     display: "grid",
-    gridTemplateColumns: direction === "left" ? "45% 55%" : "55% 45%",
+    gridTemplateColumns: "100%",
+    md: { gridTemplateColumns: direction === "left" ? "45% 55%" : "55% 45%" },
     width: "100%",
   })}
 >

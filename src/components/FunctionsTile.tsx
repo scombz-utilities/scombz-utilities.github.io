@@ -111,7 +111,8 @@ export const FunctionsTile = () => {
                 boxShadow: "1px 1px 6px rgba(0, 0, 0, 0.2)",
                 borderRadius: "10px",
                 display: "grid",
-                gridTemplateColumns: card.image ? "60% 40%" : "100%",
+                gridTemplateColumns: "100%",
+                sm: { gridTemplateColumns: card.image ? "60% 40%" : "100%" },
                 gap: 0,
                 minHeight: "250px",
               })}
@@ -151,7 +152,16 @@ export const FunctionsTile = () => {
                 ))}
               </div>
               {card.image && (
-                <div className={css({ width: "100%", height: "100%" })}>
+                <div
+                  className={css({
+                    width: "100%",
+                    height: "100%",
+                    borderTop: "2px solid #bbb",
+                    sm: {
+                      borderTop: "none",
+                    },
+                  })}
+                >
                   <img
                     src={card.image}
                     alt={card.title}
@@ -159,7 +169,12 @@ export const FunctionsTile = () => {
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      borderRadius: "0 10px 10px 0",
+                      borderRadius: "0 0 10px 10px",
+                      maxHeight: "300px",
+                      sm: {
+                        maxHeight: "none",
+                        borderRadius: "0 10px 10px 0",
+                      },
                     })}
                   />
                 </div>
