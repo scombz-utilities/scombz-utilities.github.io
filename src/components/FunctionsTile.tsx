@@ -149,91 +149,78 @@ export const FunctionsTile = () => {
           <div
             key={idx}
             className={css({
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              maxWidth: "700px",
-              margin: "0 auto",
-              justifyContent: "center",
-              alignItems: "center",
-              py: "10px",
+              my: "10px",
+              boxShadow: "1px 1px 6px rgba(0, 0, 0, 0.2)",
+              borderRadius: "10px",
+              display: "grid",
+              gridTemplateColumns: "100%",
+              sm: { gridTemplateColumns: card.image ? "60% 40%" : "100%" },
+              gap: 0,
+              minHeight: "250px",
             })}
           >
             <div
               className={css({
-                width: "calc(100% - 20px)",
-                boxShadow: "1px 1px 6px rgba(0, 0, 0, 0.2)",
-                borderRadius: "10px",
-                display: "grid",
-                gridTemplateColumns: "100%",
-                sm: { gridTemplateColumns: card.image ? "60% 40%" : "100%" },
-                gap: 0,
-                minHeight: "250px",
+                width: "100%",
+                height: "100%",
+                py: 3,
+                px: 5,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
               })}
             >
+              <h3
+                className={css({
+                  fontFamily: "Zen Kaku Gothic New",
+                  fontSize: "1.3rem",
+                  fontWeight: "bold",
+                  mb: 1,
+                })}
+              >
+                {card.title}
+              </h3>
+              {card.description.map((d) => (
+                <div key={d} className={css({ px: 2 })}>
+                  <p
+                    className={css({
+                      fontFamily: "Zen Kaku Gothic New",
+                      fontSize: "1rem",
+                    })}
+                  >
+                    {d}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {card.image && (
               <div
                 className={css({
                   width: "100%",
                   height: "100%",
-                  py: 3,
-                  px: 5,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
+                  borderTop: "2px solid #bbb",
+                  sm: {
+                    borderTop: "none",
+                  },
                 })}
               >
-                <h3
-                  className={css({
-                    fontFamily: "Zen Kaku Gothic New",
-                    fontSize: "1.3rem",
-                    fontWeight: "bold",
-                    mb: 1,
-                  })}
-                >
-                  {card.title}
-                </h3>
-                {card.description.map((d) => (
-                  <div key={d} className={css({ px: 2 })}>
-                    <p
-                      className={css({
-                        fontFamily: "Zen Kaku Gothic New",
-                        fontSize: "1rem",
-                      })}
-                    >
-                      {d}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              {card.image && (
-                <div
+                <img
+                  src={card.image}
+                  alt={card.title}
                   className={css({
                     width: "100%",
                     height: "100%",
-                    borderTop: "2px solid #bbb",
+                    objectFit: "cover",
+                    borderRadius: "0 0 10px 10px",
+                    maxHeight: "300px",
                     sm: {
-                      borderTop: "none",
+                      maxHeight: "none",
+                      borderRadius: "0 10px 10px 0",
                     },
                   })}
-                >
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className={css({
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      borderRadius: "0 0 10px 10px",
-                      maxHeight: "300px",
-                      sm: {
-                        maxHeight: "none",
-                        borderRadius: "0 10px 10px 0",
-                      },
-                    })}
-                  />
-                </div>
-              )}
-            </div>
+                />
+              </div>
+            )}
           </div>
         ))}
       </div>

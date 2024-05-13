@@ -5,7 +5,7 @@ export type ReleaseNote = {
     chrome: string;
   };
   contents: {
-    genre: "feature" | "optimization" | "fix" | "security";
+    genre: "feature" | "optimization" | "fix" | "security" | "others";
     title: string;
     explain: string;
   }[];
@@ -53,6 +53,12 @@ export const releaseNotes: ReleaseNote[] = [
         title: "English Support",
         explain:
           "You can now use ScombZ Utilities in English. The language is automatically set according to the language settings of your browser. Some parts of the UI are still in Japanese, but we are working to improve this.",
+      },
+      {
+        genre: "others",
+        title: "一部機能の削除",
+        explain:
+          "カレンダーエクスポート機能、GAS連携機能、教材並び替え機能など、一部機能を削除しました。",
       },
     ],
   },
