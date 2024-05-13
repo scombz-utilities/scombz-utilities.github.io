@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TopView from "../components/TopView.astro";
 import { css } from "../../styled-system/css";
 import "../index.css";
+import FunctionsColumn from "../components/FunctionsColumn.astro";
 ---
 
 <Layout title="ScombZ Utilities">
@@ -17,6 +18,68 @@ import "../index.css";
       })}
     >
       <TopView />
+    </div>
+    <div
+      class={css({
+        display: "flex",
+        flexDirection: "column",
+        gap: "3rem",
+        mt: "4rem",
+        width: "90%",
+        maxWidth: "1280px",
+        margin: "auto",
+      })}
+    >
+      <FunctionsColumn
+        title="行動を最適化する独自ウィジェット"
+        description={[
+          "メニューを展開することで、直接時間割や課題一覧にアクセスできます。",
+          "課題一覧には提出期限が相対時間で表示されており、直感的に提出期限がわかります。自作課題や、アンケートを表示させることも可能です。",
+          "それ以外にも、バス時刻表やカレンダー、メモやリンクなど自分の使い方に合わせたウィジェットを表示できます。",
+        ]}
+        image="/about/widget.png"
+        direction="right"
+      />
+      <FunctionsColumn
+        title="科目ページを大幅強化"
+        description={[
+          "科目詳細から、直接シラバスにアクセスできます。",
+          "アンケートを表示登録することで、課題一覧にアンケートを表示させることができます。",
+          "また、科目ごとにMarkdown記法でのメモを設定することもできます。",
+          "科目ページではURLは自動でリンクに置換されるため、Zoomや授業資料へのアクセスがスムーズになります。",
+          "一括ダウンロード機能では、科目ごとや回ごとにすべての資料をZIP形式でダウンロードできます。",
+        ]}
+        image="/about/course.png"
+      />
+      <FunctionsColumn
+        title="どこでも見られるポップアップ"
+        description={[
+          "ScombZ Utilitiesのアイコンを固定化することで、どんなWebサイトを閲覧していてもすぐにポップアップを開けます。",
+          "時間割や、課題一覧にすぐにアクセスすることができます。",
+        ]}
+        image="/about/popup.png"
+        direction="right"
+      />
+      <a
+        href="/about"
+        class={css({
+          textAlign: "center",
+          display: "block",
+          borderRadius: ".5rem",
+          color: "{colors.blue.700}",
+          transition: "all 0.2s",
+          py: ".5rem",
+          px: "4rem",
+          mb: "2rem",
+          width: "fit-content",
+          margin: "auto",
+          border: "1px solid {colors.blue.700}",
+          "&:hover": {
+            backgroundColor: "{colors.blue.700}",
+            color: "#fff",
+          },
+        })}>機能詳細を見る</a
+      >
     </div>
   </main>
 

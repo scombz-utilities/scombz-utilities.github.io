@@ -69,6 +69,60 @@ const functionCards: FunctionCard[] = [
       "各回ごとにダウンロードすることもでき、こちらはpdfに限定されません。",
     ],
   },
+  {
+    title: "シラバスの学科保存",
+    description: [
+      "シラバスの入学年度・学科を保存し、簡単にシラバスを閲覧できるようにします。",
+    ],
+    image: "/about/syllabus.png",
+  },
+  {
+    title: "学バス時刻表表示",
+    description: [
+      "大宮キャンパスと東大宮駅間のバスの簡易時刻表を表示します。",
+      "既に出発済みのバスはグレーで表示され、直近2時間以内の発車予定が一目でわかります。",
+      "学バス公式時刻表へのリンクアイコンも設置しています。",
+    ],
+    image: "/about/bus.png",
+  },
+  {
+    title: "自作課題作成",
+    description: [
+      "課題一覧に、自作の課題を追加できます。",
+      "ScombZ Utilitiesの課題一覧に表示されるため、他の課題と同じように課題へのリマインドができます。",
+    ],
+    image: "/about/originalTask.png",
+  },
+
+  {
+    title: "わかりやすい設定画面",
+    description: [
+      "詳細設定では多くの項目を設定できる上、かんたん設定ではおすすめの機能を簡単に設定できます。",
+    ],
+    image: "/about/settings.png",
+  },
+  {
+    title: "英語対応",
+    description: [
+      "ScombZ Utilitiesは日本語のほか英語にも対応しています。(v4.0.0~)",
+      "ブラウザの言語設定が英語の場合、自動的に英語表示に切り替わります。",
+    ],
+    image: "/about/i18n.png",
+  },
+  {
+    title: "S*gsot学番自動入力",
+    description: [
+      "S*gsotに学籍番号を自動で入力します。",
+      "ScombZの自動ログインが有効になっている場合、認証も自動的に行います。",
+    ],
+  },
+  {
+    title: "カスタムCSS",
+    description: [
+      "ScombZのデザインを自分好みにカスタマイズできます。",
+      "フォントや背景色、ボタンの色などを変更できます。",
+    ],
+  },
 ];
 
 export const FunctionsTile = () => {
