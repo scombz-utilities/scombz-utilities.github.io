@@ -1,0 +1,98 @@
+---
+import { css } from "../../styled-system/css";
+import "@fontsource/zen-kaku-gothic-new";
+
+interface Props {
+  title: string;
+  description: string | string[];
+  image: string;
+  direction?: "left" | "right";
+}
+
+const { title, description, image, direction = "left" } = Astro.props;
+---
+
+<div
+  class={css({
+    display: "grid",
+    gridTemplateColumns: direction === "left" ? "45% 55%" : "55% 45%",
+    width: "100%",
+  })}
+>
+  {
+    direction === "right" && (
+      <div>
+        <img
+          src={image}
+          alt="slide image"
+          class={css({
+            display: "flex",
+            justifyContent: "center",
+            borderRadius: "8px",
+            boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+          })}
+        />
+      </div>
+    )
+  }
+  <div
+    class={css({
+      px: "2rem",
+      py: "1rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+    })}
+  >
+    <h2
+      class={css({
+        fontWeight: "bold",
+        fontSize: "110%",
+        fontFamily: "Zen Kaku Gothic New",
+      })}
+    >
+      {title}
+    </h2>
+    <div class={css({ py: "1rem" })}>
+      {
+        Array.isArray(description) ? (
+          description.map((desc) => (
+            <p
+              class={css({
+                fontSize: "90%",
+                fontFamily: "Zen Kaku Gothic New",
+              })}
+            >
+              {desc}
+            </p>
+          ))
+        ) : (
+          <p
+            class={css({
+              fontSize: "90%",
+              fontFamily: "Zen Kaku Gothic New",
+            })}
+          >
+            {description}
+          </p>
+        )
+      }
+    </div>
+  </div>
+  {
+    direction === "left" && (
+      <div>
+        <img
+          src={image}
+          alt="slide image"
+          class={css({
+            display: "flex",
+            justifyContent: "center",
+            borderRadius: "8px",
+            boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+          })}
+        />
+      </div>
+    )
+  }
+</div>
