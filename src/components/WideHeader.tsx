@@ -43,6 +43,17 @@ export const WideHeader = () => {
       >
         <div className={css({ display: "flex", gap: 5, alignItems: "center" })}>
           <a
+            href="/"
+            className={css({
+              color: "black",
+              textDecoration: "none",
+              display: "block",
+              width: "fit-content",
+            })}
+          >
+            トップ
+          </a>
+          <a
             href="/release"
             className={css({
               color: "black",
