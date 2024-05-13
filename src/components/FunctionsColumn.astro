@@ -14,10 +14,71 @@ const { title, description, image, direction = "left" } = Astro.props;
 
 <div
   class={css({
-    display: "grid",
-    gridTemplateColumns: "100%",
-    md: { gridTemplateColumns: direction === "left" ? "45% 55%" : "55% 45%" },
+    display: "block",
     width: "100%",
+    md: { display: "none" },
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+    borderRadius: "8px",
+  })}
+>
+  <div class={css({ px: "1.5rem", py: "1rem" })}>
+    <h2
+      class={css({
+        fontWeight: "bold",
+        fontSize: "110%",
+        fontFamily: "Zen Kaku Gothic New",
+      })}
+    >
+      {title}
+    </h2>
+    <div class={css({ py: "1rem" })}>
+      {
+        Array.isArray(description) ? (
+          description.map((desc) => (
+            <p
+              class={css({
+                fontSize: "90%",
+                fontFamily: "Zen Kaku Gothic New",
+              })}
+            >
+              {desc}
+            </p>
+          ))
+        ) : (
+          <p
+            class={css({
+              fontSize: "90%",
+              fontFamily: "Zen Kaku Gothic New",
+            })}
+          >
+            {description}
+          </p>
+        )
+      }
+    </div>
+  </div>
+  <div>
+    <img
+      src={image}
+      alt="slide image"
+      class={css({
+        display: "flex",
+        justifyContent: "center",
+        borderRadius: "0 0 8px 8px",
+      })}
+    />
+  </div>
+</div>
+
+<div
+  class={css({
+    display: "none",
+    gridTemplateColumns: "100%",
+    width: "100%",
+    md: {
+      gridTemplateColumns: direction === "left" ? "45% 55%" : "55% 45%",
+      display: "grid",
+    },
   })}
 >
   {
