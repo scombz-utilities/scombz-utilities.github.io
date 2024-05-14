@@ -1,0 +1,51 @@
+---
+import { css } from "../../../styled-system/css";
+import "../../index.css";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource-variable/noto-sans-jp";
+import "@fontsource-variable/montserrat";
+import TopSwiper from "../../components/TopSwiper.astro";
+---
+
+<Layout title="ScombZ Utilities 4.0.0">
+  <div
+    class={css({ width: "100%", display: "flex", justifyContent: "center" })}
+  >
+    <div>
+      <h1
+        class={css({
+          fontSize: 50,
+          fontWeight: 600,
+          color: "#949795",
+          fontFamily: "Noto Sans JP, sans-serif",
+        })}
+      >
+        全く新しい
+        <span
+          class={css({
+            display: "inline-block",
+            background:
+              "linear-gradient(120deg, rgba(31, 159, 48, 1) 0%, rgba(127, 204, 160, 1) 19%, rgba(70, 161, 152, 1) 71%, rgba(217, 101, 112, 1) 100%)",
+            backgroundClip: "text",
+            color: "transparent",
+            fontWeight: 600,
+            fontFamily: "montserrat, sans-serif",
+          })}
+        >
+          ScombZ Utilities
+        </span>
+      </h1>
+      <p
+        class={css({
+          fontSize: 20,
+          color: "#545755",
+          fontFamily: "Noto Sans JP, sans-serif",
+        })}
+      >
+        ScombZ Utilities 4.0.0
+        では、0から全てを作り直しました。新しいデザイン、新しい機能、新しい使い方をお楽しみください。
+      </p>
+    </div>
+    <TopSwiper />
+  </div>
+</Layout>
