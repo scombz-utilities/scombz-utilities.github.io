@@ -8,44 +8,109 @@ import TopSwiper from "../../components/TopSwiper.astro";
 ---
 
 <Layout title="ScombZ Utilities 4.0.0">
-  <div
-    class={css({ width: "100%", display: "flex", justifyContent: "center" })}
-  >
-    <div>
-      <h1
+  <main>
+    <div
+      class={css({
+        marginBottom: 40,
+        position: "relative",
+        height: "calc(100vh - 80px)",
+        overflow: "hidden",
+      })}
+    >
+      <div
         class={css({
-          fontSize: 50,
-          fontWeight: 600,
-          color: "#949795",
-          fontFamily: "Noto Sans JP, sans-serif",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 0,
+          filter: "blur(4px)",
+          height: "100%",
+          width: "100%",
+          display: "none",
+          md: { display: "block" },
         })}
       >
-        全く新しい
-        <span
+        <TopSwiper />
+      </div>
+      <div
+        class={css({
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1,
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "#fff9",
+          px: "5vw",
+          py: "10vh",
+          md: {
+            textAlign: "center",
+            alignItems: "center",
+            py: "20vh",
+          },
+        })}
+      >
+        <h1
           class={css({
-            display: "inline-block",
-            background:
-              "linear-gradient(120deg, rgba(31, 159, 48, 1) 0%, rgba(127, 204, 160, 1) 19%, rgba(70, 161, 152, 1) 71%, rgba(217, 101, 112, 1) 100%)",
-            backgroundClip: "text",
-            color: "transparent",
             fontWeight: 600,
-            fontFamily: "montserrat, sans-serif",
+            color: "#646765",
+            fontFamily: "Noto Sans JP, sans-serif",
+            mb: "2vh",
+            fontSize: "10vw",
+            md: {
+              fontSize: "4.5vw",
+            },
           })}
         >
-          ScombZ Utilities
-        </span>
-      </h1>
-      <p
-        class={css({
-          fontSize: 20,
-          color: "#545755",
-          fontFamily: "Noto Sans JP, sans-serif",
-        })}
-      >
-        ScombZ Utilities 4.0.0
-        では、0から全てを作り直しました。新しいデザイン、新しい機能、新しい使い方をお楽しみください。
-      </p>
+          全く新しい
+          <span
+            class={css({
+              display: "block",
+              background:
+                "linear-gradient(120deg, rgba(31, 159, 48, 1) 0%, rgba(127, 204, 160, 1) 19%, rgba(70, 161, 152, 1) 71%, rgba(217, 101, 112, 1) 100%)",
+              backgroundClip: "text",
+              color: "transparent",
+              fontWeight: 600,
+              fontFamily: "montserrat, sans-serif",
+              md: {
+                display: "inline-block",
+              },
+            })}
+          >
+            ScombZ Utilities
+          </span>
+        </h1>
+        <p
+          class={css({
+            md: { fontSize: "1.8vw" },
+            fontWeight: 400,
+            color: "#343735",
+            fontFamily: "Noto Sans JP, sans-serif",
+          })}
+        >
+          ScombZ Utilities 4.0.0 では、全てを0から作り直しました。
+        </p>
+        <p
+          class={css({
+            md: { fontSize: "1.8vw" },
+            fontWeight: 400,
+            color: "#343735",
+            fontFamily: "Noto Sans JP, sans-serif",
+          })}
+        >
+          新しいデザイン、新しい機能、新しい使い方をお楽しみください。
+        </p>
+      </div>
     </div>
-    <TopSwiper />
-  </div>
+
+    <style>
+      main {
+        margin: 0 auto;
+      }
+    </style>
+  </main>
 </Layout>
