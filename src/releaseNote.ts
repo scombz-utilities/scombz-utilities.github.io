@@ -58,7 +58,7 @@ export const releaseNotes: ReleaseNote[] = [
         genre: "others",
         title: "一部機能の削除",
         explain:
-          "カレンダーエクスポート機能、GAS連携機能、教材並び替え機能など、一部機能を削除しました。",
+          "カレンダーエクスポート機能、GAS連携機能など、一部機能を削除しました。",
       },
     ],
   },
