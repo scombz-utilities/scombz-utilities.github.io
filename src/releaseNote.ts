@@ -1,7 +1,7 @@
 export type ReleaseNote = {
   version: string;
   description?: string[];
-  date: {
+  date?: {
     firefox: string;
     chrome: string;
   };
@@ -65,6 +65,24 @@ export const releaseNotes: ReleaseNote[] = [
         title: "一部機能の削除",
         explain:
           "カレンダーエクスポート機能、GAS連携機能など、一部機能を削除しました。",
+      },
+    ],
+  },
+];
+
+export const betaReleaseNote: ReleaseNote[] = [
+  {
+    version: "0.1.0",
+    description: [
+      "このバージョンはScombZ Utilities v4.0.0のベータ版です。バグが発生する可能性があります。",
+      "アップデート内容については、[GitHubのリリースノート](https://github.com/scombz-utilities/scombz-utilities-react/releases/tag/v4.0.0-beta5)をご覧ください。",
+      "v4.0.0からの新機能については、[特別ページ](/lp/4.0.0)をご覧ください。",
+    ],
+    contents: [
+      {
+        genre: "feature",
+        title: "詳細はGitHubをご覧ください。",
+        explain: "このBetaは GitHub Releasesのv4.0.0-beta5と同一内容です。",
       },
     ],
   },

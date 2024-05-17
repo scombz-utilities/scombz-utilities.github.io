@@ -64,14 +64,16 @@ import { FaExternalLinkAlt } from "react-icons/fa";
                 </span>
               </h2>
             </a>
-            <p
-              class={css({
-                fontSize: "90%",
-                color: "#666",
-              })}
-            >
-              {format(new Date(note.date.chrome), "yyyy-MM-dd")}
-            </p>
+            {note.date && (
+              <p
+                class={css({
+                  fontSize: "90%",
+                  color: "#666",
+                })}
+              >
+                {format(new Date(note.date.chrome), "yyyy-MM-dd")}
+              </p>
+            )}
             <div>
               {note.contents.map((n) => (
                 <>
