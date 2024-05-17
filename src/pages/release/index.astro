@@ -2,8 +2,9 @@
 import Layout from "../../layouts/Layout.astro";
 import { css } from "../../../styled-system/css";
 import "../../index.css";
-import { releaseNotes, type ReleaseNote } from "../../releaseNote";
+import { releaseNotes } from "../../releaseNote";
 import { format } from "date-fns";
+import { FaExternalLinkAlt } from "react-icons/fa";
 ---
 
 <Layout title="ScombZ Utilities">
@@ -39,17 +40,28 @@ import { format } from "date-fns";
               mt: "2rem",
             })}
           >
-            <a href={`/release/${note.version}`}>
+            <a href={`/release/${note.version}`} target="_blank">
               <h2
                 class={css({
                   fontSize: "110%",
                   cursor: "pointer",
+                  textDecoration: "underline",
                   "&:hover": {
-                    textDecoration: "underline",
+                    color: "#666",
                   },
                 })}
               >
                 ver. {note.version}
+                <span
+                  class={css({
+                    display: "inline-block",
+                    fontSize: "60%",
+                    ml: ".3rem",
+                    verticalAlign: "middle",
+                  })}
+                >
+                  <FaExternalLinkAlt />
+                </span>
               </h2>
             </a>
             <p

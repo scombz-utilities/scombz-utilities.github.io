@@ -1,5 +1,6 @@
 export type ReleaseNote = {
   version: string;
+  description?: string[];
   date: {
     firefox: string;
     chrome: string;
@@ -13,6 +14,11 @@ export type ReleaseNote = {
 export const releaseNotes: ReleaseNote[] = [
   {
     version: "4.0.0",
+    description: [
+      "ScombZ Utilities v4.0.0では、JavaScriptからTypeScriptへの大規模なリファクタリングに伴い、多くの機能が追加・変更されています。",
+      "Reactを採用することで、より高機能なウィジェット機能や設定画面を実装しました。",
+      "v4.0.0からの新機能については、[特別ページ](/lp/4.0.0)をご覧ください。",
+    ],
     date: {
       firefox: "2024/6/10",
       chrome: "2024/6/10",

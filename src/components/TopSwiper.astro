@@ -8,7 +8,7 @@ const slideImages = [
 ];
 ---
 
-<div>
+<div class={css({ height: "100%" })}>
   <div class="swiper">
     <div class="swiper-wrapper">
       {
@@ -46,7 +46,7 @@ const slideImages = [
   }
 
   .swiper-slide img {
-    height: auto;
+    height: 100%;
     max-width: 100%;
     object-fit: cover;
   }
@@ -59,16 +59,19 @@ const slideImages = [
 
 <script>
   import Swiper from "swiper";
-  import { Navigation, Pagination } from "swiper/modules";
+  import { Navigation, Pagination, Autoplay } from "swiper/modules";
   import "swiper/css/bundle";
 
   export const swiperConfig = {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     loop: true,
     speed: 2000,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -77,7 +80,4 @@ const slideImages = [
   };
 
   const swiper = new Swiper(".swiper", swiperConfig);
-  setInterval(() => {
-    swiper.slideNext();
-  }, 5000);
 </script>

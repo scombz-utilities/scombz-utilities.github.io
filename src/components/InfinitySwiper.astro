@@ -1,0 +1,140 @@
+---
+import { css } from "../../styled-system/css";
+import "@fontsource-variable/noto-sans-jp";
+import "@fontsource/zen-kaku-gothic-new";
+
+interface Props {
+  slides: {
+    title: string;
+    description: string[];
+    imgSrc?: string;
+  }[];
+}
+
+const { slides } = Astro.props;
+---
+
+<div
+  class={css({ height: "100%", width: "100%", overflow: "hidden", py: "20px" })}
+>
+  <div class="infinity-swiper">
+    <div class="swiper-wrapper">
+      {
+        slides.map((node) => (
+          <div class="swiper-slide">
+            <div
+              class={css({
+                mx: 2,
+                bg: "white",
+                borderRadius: 10,
+                boxShadow: "1px 1px 6px rgba(0, 0, 0, 0.2)",
+                height: 450,
+                overflow: "hidden",
+                lg: { height: 410 },
+              })}
+            >
+              <div
+                class={css({
+                  p: 4,
+                  height: 200,
+                  lg: { px: 8, py: 4, height: 160 },
+                })}
+              >
+                <h2
+                  class={css({
+                    fontSize: 20,
+                    fontWeight: 400,
+                    fontFamily: "Zen Kaku Gothic New",
+                  })}
+                >
+                  {node.title}
+                </h2>
+                <div
+                  class={css({
+                    mt: 2,
+                    fontSize: 16,
+                    fontFamily: "Noto Sans JP",
+                  })}
+                >
+                  {node.description.map((text) => (
+                    <p
+                      class={css({
+                        wordBreak: "auto-phrase",
+                      })}
+                    >
+                      {text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              {node.imgSrc && (
+                <div
+                  class={css({
+                    width: "100%",
+                    height: 250,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    opacity: 0.8,
+                    boxShadow: "0 0 8px #aaa",
+                  })}
+                  style={{ backgroundImage: `url(${node.imgSrc})` }}
+                >
+                  <div
+                    class={css({
+                      width: "100%",
+                      height: "100%",
+                      backdropFilter: "blur(4px)",
+                      backgroundColor: "#0006",
+                      backgroundSize: "contain",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      overflow: "hidden",
+                    })}
+                    style={{ backgroundImage: `url(${node.imgSrc})` }}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  /* スライドの動き等速 */
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  /* 画像のサイズ調整 */
+  .swiper-slide img {
+    height: auto;
+    width: 100%;
+  }
+</style>
+
+<script>
+  import Swiper from "swiper";
+  import { Autoplay } from "swiper/modules";
+  import "swiper/css/bundle";
+
+  export const swiperConfig = {
+    modules: [Autoplay],
+    slidesPerView: Math.min(Math.floor(window.innerWidth / 600) || 1, 4),
+    loop: true,
+    speed: 6000,
+    autoplay: {
+      delay: 0,
+    },
+  };
+
+  const swiper = new Swiper(".infinity-swiper", swiperConfig);
+</script>

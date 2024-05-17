@@ -7,9 +7,16 @@ interface Props {
   description: string | string[];
   image: string;
   direction?: "left" | "right";
+  noBoxShadow?: boolean;
 }
 
-const { title, description, image, direction = "left" } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  direction = "left",
+  noBoxShadow = false,
+} = Astro.props;
 ---
 
 <div
@@ -17,8 +24,8 @@ const { title, description, image, direction = "left" } = Astro.props;
     display: "block",
     width: "100%",
     md: { display: "none" },
-    boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-    borderRadius: "8px",
+    boxShadow: noBoxShadow ? "none" : "0 0 10px rgba(0, 0, 0, 0.2)",
+    borderRadius: noBoxShadow ? "0" : "8px",
   })}
 >
   <div class={css({ px: "1.5rem", py: "1rem" })}>
@@ -64,7 +71,7 @@ const { title, description, image, direction = "left" } = Astro.props;
       class={css({
         display: "flex",
         justifyContent: "center",
-        borderRadius: "0 0 8px 8px",
+        borderRadius: noBoxShadow ? "0" : "0 0 8px 8px",
       })}
     />
   </div>
@@ -110,7 +117,7 @@ const { title, description, image, direction = "left" } = Astro.props;
     <h2
       class={css({
         fontWeight: "bold",
-        fontSize: "110%",
+        fontSize: "120%",
         fontFamily: "Zen Kaku Gothic New",
       })}
     >
@@ -122,7 +129,7 @@ const { title, description, image, direction = "left" } = Astro.props;
           description.map((desc) => (
             <p
               class={css({
-                fontSize: "90%",
+                fontSize: "100%",
                 fontFamily: "Zen Kaku Gothic New",
               })}
             >

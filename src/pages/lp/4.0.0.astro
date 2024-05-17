@@ -5,15 +5,18 @@ import Layout from "../../layouts/Layout.astro";
 import "@fontsource-variable/noto-sans-jp";
 import "@fontsource-variable/montserrat";
 import TopSwiper from "../../components/TopSwiper.astro";
+import FunctionsColumn from "../../components/FunctionsColumn.astro";
+import InfinitySwiper from "../../components/InfinitySwiper.astro";
 ---
 
 <Layout title="ScombZ Utilities 4.0.0">
   <main>
     <div
       class={css({
-        marginBottom: 40,
+        marginBottom: 20,
         position: "relative",
-        height: "calc(100vh - 80px)",
+        height: "calc(100vw - 60px)",
+        md: { height: "calc(100vh - 80px)" },
         overflow: "hidden",
       })}
     >
@@ -50,7 +53,7 @@ import TopSwiper from "../../components/TopSwiper.astro";
           md: {
             textAlign: "center",
             alignItems: "center",
-            py: "20vh",
+            py: "28vh",
           },
         })}
       >
@@ -92,7 +95,7 @@ import TopSwiper from "../../components/TopSwiper.astro";
             fontFamily: "Noto Sans JP, sans-serif",
           })}
         >
-          ScombZ Utilities 4.0.0 では、全てを0から作り直しました。
+          ScombZ Utilities v4.0.0 では、全てを0から作り直しました。
         </p>
         <p
           class={css({
@@ -106,11 +109,226 @@ import TopSwiper from "../../components/TopSwiper.astro";
         </p>
       </div>
     </div>
-
-    <style>
-      main {
-        margin: 0 auto;
-      }
-    </style>
+    <div
+      class={css({
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "3rem",
+        md: {
+          width: "80%",
+        },
+        maxWidth: "1280px",
+        margin: "auto",
+        mb: "2rem",
+        fontSize: "1.2rem",
+      })}
+    >
+      <h2
+        class={css({
+          textAlign: "center",
+          fontSize: "1.8rem",
+          fontWeight: 600,
+          fontFamily: "Noto Sans JP, sans-serif",
+          color: "#646765",
+          margin: "2rem auto",
+        })}
+      >
+        主な変更点
+      </h2>
+      <FunctionsColumn
+        noBoxShadow
+        title="新しくなった独自ウィジェット"
+        description={[
+          "ScombZ Utilities v4.0.0では、メニュー横に表示されるウィジェットの大幅な変更を行いました。",
+          "今までの時間割、課題一覧、メモの機能をパワーアップし、さらに複数のウィジェットを追加しました。",
+          "UIも大幅に変更し、誰でも慣れ親しんだ使いやすさを重視しました。",
+        ]}
+        image="/about/widget.png"
+        direction="right"
+      />
+      <FunctionsColumn
+        noBoxShadow
+        title="刷新したポップアップ"
+        description={[
+          "ScombZ Utilitiesのアイコンを固定化することで、どんなWebサイトを閲覧していてもすぐにポップアップを開けます。",
+          "時間割や、課題一覧にすぐにアクセスすることができます。",
+        ]}
+        image="/about/popup.png"
+        direction="left"
+      />
+      <FunctionsColumn
+        noBoxShadow
+        title="UXに配慮した設定画面"
+        description={[
+          "設定画面は、全てが新しくなりました。",
+          "タブを使用した分類、統一感のあるデザイン、使いやすさを重視した機能を追加しました。",
+        ]}
+        image="/about/settings.png"
+        direction="right"
+      />
+    </div>
+    <div
+      class={css({
+        backgroundColor: "#f9f9f9",
+        padding: "1rem 0",
+        mt: "6rem",
+        mb: "2rem",
+      })}
+    >
+      <h2
+        class={css({
+          textAlign: "center",
+          fontSize: "1.8rem",
+          fontWeight: 600,
+          fontFamily: "Noto Sans JP, sans-serif",
+          color: "#646765",
+          margin: "2rem auto",
+        })}
+      >
+        詳細な新機能の紹介
+      </h2>
+      <InfinitySwiper
+        slides={[
+          {
+            title: "新しくなった週時間割",
+            description: [
+              "時間割の表示が見やすくなりました。",
+              "表示コマ数や曜日は自動で調整され、授業時間も表示されます",
+            ],
+            imgSrc: "/lp/timetableTask.png",
+          },
+          {
+            title: "時間割日別表示",
+            description: [
+              "日別に時間割を表示できるようになりました。",
+              "ウィンドウの幅が狭くても、見やすく表示されます。",
+            ],
+            imgSrc: "/lp/dayTimeTable.png",
+          },
+          {
+            title: "秒数表示された時計",
+            description: [
+              "時間割上部に表示する日付は、秒数単位の時計にも変更できます。",
+              "テストの開始時刻や、授業の終了時刻を確認するのに便利です。",
+            ],
+            imgSrc: "/lp/seconds.gif",
+          },
+          {
+            title: "全てを見られる課題一覧",
+            description: [
+              "今までの課題一覧では、一定以上の課題数になると表示が切れてしまっていました。",
+              "新しい課題一覧では、ページネーションによって全ての課題を見ることができます。",
+            ],
+            imgSrc: "/lp/taskPagination.gif",
+          },
+          {
+            title: "新しくなったメモ帳",
+            description: [
+              "メモ帳は入力のしやすさを重視しました。",
+              "1行ごとのリマインダーのような使い方に適しています。",
+            ],
+            imgSrc: "/lp/note.png",
+          },
+          {
+            title: "新ウィジェット リンク集",
+            description: [
+              "リンク集には、カード形式で様々なページを追加できます。",
+              "自由に追加や削除をすることができ、よく使うリンクをまとめることができます。",
+            ],
+            imgSrc: "/lp/links.png",
+          },
+          {
+            title: "新ウィジェット バス時刻表",
+            description: [
+              "大宮キャンパス・東大宮駅間の学バスの時刻表をすぐに確認できます。",
+              "すでに出発したバスは薄く表示され、次のバスがひと目でわかります。",
+              "標準は大宮キャンパス発が表示されますが、1クリックで東大宮駅発にも変更できます。",
+            ],
+            imgSrc: "/lp/bus.png",
+          },
+          {
+            title: "新ウィジェット カレンダー",
+            description: [
+              "カレンダーはScombZトップのカレンダーと連動しています。",
+              "簡単な学年歴や、課題の提出期限が表示されます。",
+            ],
+            imgSrc: "/lp/calendar.png",
+          },
+          {
+            title: "ウィジェットの表示設定",
+            description: [
+              "ウィジェットの表示設定は、設定画面のウィジェット設定タブから変更できます。",
+              "表示するウィジェットを選択したり、表示順を変更することができます。",
+            ],
+            imgSrc: "/lp/widgetOption.png",
+          },
+          {
+            title: "ESCキーで閉じる",
+            description: [
+              "ウィジェットやサイドメニューは、ESCキーで閉じることができます。",
+            ],
+          },
+          {
+            title: "英語に対応",
+            description: [
+              "ScombZ Utilitiesは、英語にも対応しました。",
+              "言語設定はブラウザの言語設定に従います。",
+            ],
+            imgSrc: "/about/i18n.png",
+          },
+          {
+            title: "右クリック/ホイールクリック",
+            description: [
+              "LMSページ内の科目ボタン、科目別ページのダウンロードリンクなど、右クリックが通常できないリンクを通常のリンクと同じようにサポートします。",
+            ],
+            imgSrc: "/about/contextMenu.png",
+          },
+          {
+            title: "シラバスの学科保存",
+            description: [
+              "シラバスの入学年度・学科を保存し、簡単にシラバスを閲覧できるようにします。",
+            ],
+            imgSrc: "/about/syllabus.png",
+          },
+        ]}
+      />
+      <a
+        href="/about"
+        class={css({
+          textAlign: "center",
+          display: "block",
+          borderRadius: ".5rem",
+          color: "{colors.indigo.700}",
+          transition: "all 0.2s",
+          py: ".5rem",
+          px: "4rem",
+          mb: "2rem",
+          width: "fit-content",
+          margin: "auto",
+          border: "1px solid {colors.indigo.700}",
+          "&:hover": {
+            backgroundColor: "{colors.indigo.700}",
+            color: "#fff",
+          },
+        })}>機能詳細はこちら</a
+      >
+    </div>
   </main>
+
+  <style>
+    main {
+      margin: 0 auto;
+    }
+
+    /* スライドの動き等速 */
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    /* 画像のサイズ調整 */
+    .swiper-slide img {
+      height: auto;
+      width: 100%;
+    }
+  </style>
 </Layout>

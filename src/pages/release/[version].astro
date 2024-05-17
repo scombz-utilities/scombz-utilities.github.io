@@ -27,7 +27,26 @@ const { version } = Astro.params;
     <h1 class={css({ padding: 2, fontSize: "150%", mb: 0 })}>
       ScombZ Utilities ver.{version} - リリースノート
     </h1>
-    <div class={css({ px: 4 })}>
+    <div class={css({ p: 4, fontSize: "120%" })}>
+      {
+        releaseNote.description &&
+          releaseNote.description.map((desc) => (
+            <p
+              set:html={desc.replace(
+                /\[([^\]]+)\]\(([^)]+)\)/g,
+                (_, text, url) => {
+                  return `
+                  <a class="${css({
+                    color: "{colors.indigo.600}",
+                    textDecoration: "underline",
+                  })}" href="${url}">${text}</a>`;
+                },
+              )}
+            />
+          ))
+      }
+    </div>
+    <div class={css({ p: 4, fontSize: "120%" })}>
       <p>
         Chrome: {format(releaseNote.date.chrome, "yyyy/MM/dd")}
       </p>
@@ -38,8 +57,10 @@ const { version } = Astro.params;
     <div class={css({ px: 4 })}>
       <h2
         class={css({
+          fontWeight: "bold",
           fontSize: "120%",
-          my: 3,
+          mt: 4,
+          mb: 2,
         })}
       >
         変更点
