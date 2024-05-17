@@ -1,6 +1,7 @@
 export type ReleaseNote = {
   version: string;
   description?: string[];
+  released?: boolean;
   date?: {
     firefox: string;
     chrome: string;
@@ -19,6 +20,7 @@ export const releaseNotes: ReleaseNote[] = [
       "Reactを採用することで、より高機能なウィジェット機能や設定画面を実装しました。",
       "v4.0.0からの新機能については、[特別ページ](/lp/4.0.0)をご覧ください。",
     ],
+    released: false,
     date: {
       firefox: "2024/6/10",
       chrome: "2024/6/10",
@@ -73,6 +75,7 @@ export const releaseNotes: ReleaseNote[] = [
 export const betaReleaseNote: ReleaseNote[] = [
   {
     version: "0.1.0",
+    released: true,
     description: [
       "このバージョンはScombZ Utilities v4.0.0のベータ版です。バグが発生する可能性があります。",
       "アップデート内容については、[GitHubのリリースノート](https://github.com/scombz-utilities/scombz-utilities-react/releases/tag/v4.0.0-beta5)をご覧ください。",

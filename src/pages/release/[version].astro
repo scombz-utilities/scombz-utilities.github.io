@@ -51,7 +51,29 @@ const { version } = Astro.params;
       }
     </div>
     {
-      releaseNote.date && (
+      !releaseNote.released && (
+        <div class={css({ p: 4 })}>
+          <p
+            class={css({
+              fontSize: "120%",
+              color: "{colors.rose.600}",
+              fontWeight: "bold",
+              textDecoration: "underline",
+            })}
+          >
+            このバージョンはリリース予定状態であり、公開前です。
+          </p>
+          {releaseNote.date && (
+            <p class={css({ fontSize: "120%", fontWeight: "bold" })}>
+              リリース予定日: {format(releaseNote.date.chrome, "yyyy/MM/dd")}
+              前後
+            </p>
+          )}
+        </div>
+      )
+    }
+    {
+      releaseNote.date && releaseNote.released && (
         <div class={css({ p: 4, fontSize: "120%" })}>
           <p>Chrome: {format(releaseNote.date.chrome, "yyyy/MM/dd")}</p>
           <p>FireFox: {format(releaseNote.date.firefox, "yyyy/MM/dd")}</p>
