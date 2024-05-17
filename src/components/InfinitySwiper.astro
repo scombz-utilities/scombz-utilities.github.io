@@ -128,13 +128,22 @@ const { slides } = Astro.props;
 
   export const swiperConfig = {
     modules: [Autoplay],
-    slidesPerView: Math.min(Math.floor(window.innerWidth / 600) || 1, 4),
+    slidesPerView: Math.min(Math.floor(window.innerWidth / 550) || 1, 4),
     loop: true,
     speed: 6000,
     autoplay: {
       delay: 0,
+      disableOnInteraction: false,
     },
   };
 
   const swiper = new Swiper(".infinity-swiper", swiperConfig);
+
+  swiper.on("touchStart", function () {
+    swiper.autoplay.stop();
+  });
+
+  swiper.on("sliderMove", function () {
+    swiper.autoplay.stop();
+  });
 </script>
