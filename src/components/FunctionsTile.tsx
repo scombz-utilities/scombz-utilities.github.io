@@ -93,6 +93,22 @@ const functionCards: FunctionCard[] = [
     ],
     image: "/about/originalTask.png",
   },
+  {
+    title: "教員メールの効率化",
+    description: [
+      "教員のメールアドレスの記載部分に、にコピーボタンとGmail起動ボタンを追加します。",
+      "1クリックでメールを送ることができます。",
+    ],
+    image: "/about/mail.png",
+  },
+  {
+    title: "スクロールを減らすクイックメニュー",
+    description: [
+      "科目詳細ページ内に、ページ内のコンテンツへのリンク集を追加します。",
+      "クイックメニューをクリックすると、その機能へ自動スクロールされます。",
+    ],
+    image: "/about/quickmenu.png",
+  },
 
   {
     title: "わかりやすい設定画面",
