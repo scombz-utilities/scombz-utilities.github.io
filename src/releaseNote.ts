@@ -22,8 +22,8 @@ export const releaseNotes: ReleaseNote[] = [
     ],
     released: false,
     date: {
-      firefox: "2024/6/10",
-      chrome: "2024/6/10",
+      firefox: "2024/6/20",
+      chrome: "2024/6/20",
     },
     contents: [
       {
@@ -43,6 +43,12 @@ export const releaseNotes: ReleaseNote[] = [
         title: "ログインの自動化",
         explain:
           "未ログイン状態で表示される「学生ログイン」やADFS二段階認証確認画面の「次へ」ボタンを自動でクリックするだけでなく、ログイン情報を保存することで学籍番号やパスワードを自動で入力します。",
+      },
+      {
+        genre: "feature",
+        title: "ポップアップの最適化",
+        explain:
+          "ポップアップの表示を最適化し、より使いやすくなりました。全操作をキーボードで行うこともできるようになりました。",
       },
       {
         genre: "feature",
