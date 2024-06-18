@@ -14,6 +14,32 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.1.0",
+    description: [
+      "ScombZ Utilities v4.1.0では、v4.0.0の一部のバグ修正及びダークモードの追加を行いました。",
+      "v4.0.0からの新機能については、[特別ページ](/lp/4.0.0)をご覧ください。",
+    ],
+    released: false,
+    date: {
+      firefox: "未定",
+      chrome: "2024/6/20",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "バグ修正",
+        explain:
+          "ポップアップから課題一覧を更新した時、リンクが正しく取得されない問題を修正しました。",
+      },
+      {
+        genre: "feature",
+        title: "ダークモードの追加",
+        explain:
+          "ダークモード機能を追加しました。ダークモードは設定画面から有効化できます。",
+      },
+    ],
+  },
+  {
     version: "4.0.0",
     description: [
       "ScombZ Utilities v4.0.0では、JavaScriptからTypeScriptへの大規模なリファクタリングに伴い、多くの機能が追加・変更されています。",
