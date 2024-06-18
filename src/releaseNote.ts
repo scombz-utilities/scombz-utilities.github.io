@@ -20,10 +20,10 @@ export const releaseNotes: ReleaseNote[] = [
       "Reactを採用することで、より高機能なウィジェット機能や設定画面を実装しました。",
       "v4.0.0からの新機能については、[特別ページ](/lp/4.0.0)をご覧ください。",
     ],
-    released: false,
+    released: true,
     date: {
-      firefox: "2024/6/20",
-      chrome: "2024/6/20",
+      firefox: "未定",
+      chrome: "2024/6/18",
     },
     contents: [
       {

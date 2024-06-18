@@ -76,7 +76,12 @@ const { version } = Astro.params;
       releaseNote.date && releaseNote.released && (
         <div class={css({ p: 4, fontSize: "120%" })}>
           <p>Chrome: {format(releaseNote.date.chrome, "yyyy/MM/dd")}</p>
-          <p>FireFox: {format(releaseNote.date.firefox, "yyyy/MM/dd")}</p>
+          <p>
+            FireFox:{" "}
+            {releaseNote.date.firefox === "未定"
+              ? "未定"
+              : format(releaseNote.date.firefox, "yyyy/MM/dd")}
+          </p>
         </div>
       )
     }
