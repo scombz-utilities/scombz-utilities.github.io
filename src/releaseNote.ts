@@ -22,7 +22,7 @@ export const releaseNotes: ReleaseNote[] = [
     released: false,
     date: {
       firefox: "未定",
-      chrome: "未定",
+      chrome: "2024/6/20",
     },
     contents: [
       {
