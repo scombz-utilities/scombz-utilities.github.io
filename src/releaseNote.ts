@@ -37,6 +37,12 @@ export const releaseNotes: ReleaseNote[] = [
         explain:
           "ダークモード機能を追加しました。ダークモードは設定画面から有効化できます。",
       },
+      {
+        genre: "feature",
+        title: "FireFoxに仮対応",
+        explain:
+          "FireFoxに対応しました。ただし、一部機能には制限がかけられているため、Chromeでの利用を推奨します。",
+      },
     ],
   },
   {
