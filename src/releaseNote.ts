@@ -21,7 +21,7 @@ export const releaseNotes: ReleaseNote[] = [
     ],
     released: false,
     date: {
-      firefox: "未定",
+      firefox: "2024/6/20",
       chrome: "2024/6/20",
     },
     contents: [
@@ -54,7 +54,7 @@ export const releaseNotes: ReleaseNote[] = [
     ],
     released: true,
     date: {
-      firefox: "未定",
+      firefox: "2024/6/20",
       chrome: "2024/6/18",
     },
     contents: [
