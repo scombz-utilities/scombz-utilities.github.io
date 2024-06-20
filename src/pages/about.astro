@@ -69,6 +69,15 @@ import { FunctionsTile } from "../components/FunctionsTile";
           image="/about/popup.png"
           direction="right"
         />
+        <FunctionsColumn
+          title="ダークモードで目に優しく"
+          description={[
+            "ScombZをダークモードに対応させました。",
+            "暗い中での作業や夜間の利用でも、目に優しく快適です。",
+            "拡張機能設定画面のレイアウト設定から有効化することができます。",
+          ]}
+          image="/about/darkmode.jpg"
+        />
       </div>
       <div class={css({ mt: "2rem", md: { px: "1rem", mt: "4rem" } })}>
         <FunctionsTile client:load />
