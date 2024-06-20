@@ -19,7 +19,7 @@ export const releaseNotes: ReleaseNote[] = [
       "ScombZ Utilities v4.1.0では、v4.0.0の一部のバグ修正及びダークモードの追加を行いました。",
       "v4.0.0からの新機能については、[特別ページ](/lp/4.0.0)をご覧ください。",
     ],
-    released: false,
+    released: true,
     date: {
       firefox: "2024/6/20",
       chrome: "2024/6/20",
