@@ -14,6 +14,37 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.1.1",
+    description: [
+      "ScombZ Utilities v4.1.1では、一部のバグ修正と機能の修正を行いました。",
+    ],
+    released: true,
+    date: {
+      firefox: "2024/6/22",
+      chrome: "2024/6/22",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "ダークモードのスタイル修正",
+        explain:
+          "ダークモードのスタイルが一部正しく適用されていない問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "ウィジェット透明度の調整",
+        explain:
+          "ウィジェットの透明度を調整し、より見やすくなるようにしました。",
+      },
+      {
+        genre: "optimization",
+        title: "トップページレイアウトの最適化",
+        explain:
+          "トップページのレイアウト変更機能を最適化し、ScombZログイン画面にのみ表示されるお知らせをTop画面でも表示されるようにしました。",
+      },
+    ],
+  },
+  {
     version: "4.1.0",
     description: [
       "ScombZ Utilities v4.1.0では、v4.0.0の一部のバグ修正及びダークモードの追加を行いました。",
