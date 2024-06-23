@@ -14,6 +14,48 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.1.2",
+    description: [
+      "ScombZ Utilities v4.1.2では、一部のバグ修正と機能の修正を行いました。",
+    ],
+    released: true,
+    date: {
+      firefox: "2024/6/24",
+      chrome: "2024/6/24",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "LMSの取得エラーが起きる問題を修正",
+        explain:
+          "LMSに「編集可能な授業」がある場合に取得エラーが起きる問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "科目別ページで起きる表示バグの修正",
+        explain:
+          "科目別ページでないのにページ内リンクのボックスが表示されるバグを修正しました",
+      },
+      {
+        genre: "fix",
+        title: "アップデート時にリリースノートが表示されない問題の修正",
+        explain:
+          "アップデート時にリリースノートが表示されないことがある問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "FireFox版ウィジェットの表示調整",
+        explain:
+          "FireFox版ウィジェットで、ウィジェットの横の長さに最大値を設定しました。",
+      },
+      {
+        genre: "optimization",
+        title: "処理の最適化",
+        explain: "一部の処理のアルゴリズムを改善し、最適化を行いました。",
+      },
+    ],
+  },
+  {
     version: "4.1.1",
     description: [
       "ScombZ Utilities v4.1.1では、一部のバグ修正と機能の修正を行いました。",
