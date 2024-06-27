@@ -82,6 +82,9 @@ const { version } = Astro.params;
               ? "未定"
               : format(releaseNote.date.firefox, "yyyy/MM/dd")}
           </p>
+          {releaseNote.date.edge && (
+            <p>Edge: {format(releaseNote.date.edge, "yyyy/MM/dd")}</p>
+          )}
         </div>
       )
     }

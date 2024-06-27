@@ -5,6 +5,7 @@ export type ReleaseNote = {
   date?: {
     firefox: string;
     chrome: string;
+    edge?: string;
   };
   contents: {
     genre: "feature" | "optimization" | "fix" | "security" | "others";
@@ -22,6 +23,7 @@ export const releaseNotes: ReleaseNote[] = [
     date: {
       firefox: "2024/6/24",
       chrome: "2024/6/24",
+      edge: "2024/6/28",
     },
     contents: [
       {
@@ -52,6 +54,12 @@ export const releaseNotes: ReleaseNote[] = [
         genre: "optimization",
         title: "処理の最適化",
         explain: "一部の処理のアルゴリズムを改善し、最適化を行いました。",
+      },
+      {
+        genre: "others",
+        title: "Edge版のリリース",
+        explain:
+          "Edge版のリリースを行いました。Edge版はChrome版と同じ機能を提供します。",
       },
     ],
   },
