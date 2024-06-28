@@ -15,6 +15,24 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.1.3",
+    description: ["ScombZ Utilities v4.1.3では、バグ修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/6/28",
+      chrome: "2024/6/28",
+      edge: "2024/6/28",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "自作課題が残り続ける問題の修正",
+        explain:
+          "自作課題が期限を過ぎてもデータ上に残り続ける問題を修正しました。",
+      },
+    ],
+  },
+  {
     version: "4.1.2",
     description: [
       "ScombZ Utilities v4.1.2では、一部のバグ修正と機能の修正を行いました。",
