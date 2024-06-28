@@ -42,6 +42,7 @@ const browsers = [
             gap: 3,
             cursor: "pointer",
             userSelect: "none",
+            transition: "all 0.2s",
             "&:hover": {
               border: "1px solid {colors.cyan.600}",
               color: "{colors.cyan.600}",
@@ -70,21 +71,34 @@ const browsers = [
 
 <style>
   .now-browser {
-    background-color: "{colors.cyan.800} !important";
-    color: "{colors.white} !important";
+    background-color: #155e75 !important;
+    color: #fff !important;
+  }
+  .now-browser:hover {
+    background-color: #0e7490 !important;
   }
 </style>
 
 <script>
+  function highlightCurrentBrowser(element: HTMLDivElement) {
+    element.classList.add("now-browser");
+    const parent = element.parentNode as HTMLDivElement;
+    parent.insertBefore(element, parent.firstChild);
+  }
+
   const ua = navigator.userAgent;
   const isChrome = ua.indexOf("Chrome") > -1;
   const isFirefox = ua.indexOf("Firefox") > -1;
   const isEdge = ua.indexOf("Edg") > -1;
-  if (isChrome) {
-    document.getElementById("Chrome")?.classList.add("now-browser");
+  if (isEdge) {
+    highlightCurrentBrowser(document.getElementById("Edge") as HTMLDivElement);
+  } else if (isChrome) {
+    highlightCurrentBrowser(
+      document.getElementById("Chrome") as HTMLDivElement,
+    );
   } else if (isFirefox) {
-    document.getElementById("FireFox")?.classList.add("now-browser");
-  } else if (isEdge) {
-    document.getElementById("Edge")?.classList.add("now-browser");
+    highlightCurrentBrowser(
+      document.getElementById("FireFox") as HTMLDivElement,
+    );
   }
 </script>
