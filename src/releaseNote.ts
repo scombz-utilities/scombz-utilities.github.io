@@ -15,6 +15,35 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.1.4",
+    description: ["ScombZ Utilities v4.1.3では、バグ修正を行いました。"],
+    released: false,
+    date: {
+      firefox: "2024/8/4",
+      chrome: "2024/8/5",
+      edge: "2024/8/5",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "ダークモードの色の調整",
+        explain: "ダークモードの色を調整し、より見やすくなるようにしました。",
+      },
+      {
+        genre: "fix",
+        title: "カスタムCSSが適用されない問題の修正",
+        explain:
+          "ダークモードとカスタムCSSを併用した場合、カスタムCSSが適用されない問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "科目別画面ではみ出る問題の修正",
+        explain:
+          "科目別画面で、サイドメニューの調整をオフにした際にコンテンツが画面からはみ出る問題を修正しました。",
+      },
+    ],
+  },
+  {
     version: "4.1.3",
     description: ["ScombZ Utilities v4.1.3では、バグ修正を行いました。"],
     released: true,
