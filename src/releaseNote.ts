@@ -17,7 +17,7 @@ export const releaseNotes: ReleaseNote[] = [
   {
     version: "4.1.4",
     description: ["ScombZ Utilities v4.1.3では、バグ修正を行いました。"],
-    released: false,
+    released: true,
     date: {
       firefox: "2024/8/4",
       chrome: "2024/8/5",
