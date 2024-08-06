@@ -15,13 +15,41 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.1.5",
+    description: ["ScombZ Utilities v4.1.5では、バグ修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/8/6",
+      chrome: "2024/8/6",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "課題提出の際に表示が潰れる問題の修正",
+        explain:
+          "科目別画面で、課題提出の際にコンテンツが潰れる問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "ログイン前お知らせ取得の修正",
+        explain:
+          "ログイン前のお知らせの取得がうまく行かないことがある問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "重複オプションの削除",
+        explain: "設定画面にて重複していたオプションを削除しました。",
+      },
+    ],
+  },
+  {
     version: "4.1.4",
-    description: ["ScombZ Utilities v4.1.3では、バグ修正を行いました。"],
+    description: ["ScombZ Utilities v4.1.4では、バグ修正を行いました。"],
     released: true,
     date: {
       firefox: "2024/8/4",
-      chrome: "2024/8/5",
-      edge: "2024/8/5",
+      chrome: "2024/8/4",
+      edge: "2024/8/7",
     },
     contents: [
       {
