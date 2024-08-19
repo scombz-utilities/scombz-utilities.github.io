@@ -15,12 +15,29 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.2.0",
+    description: ["ScombZ Utilities v4.2.0では、機能の追加を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/8/19",
+      chrome: "2024/8/19",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "トップページに課題・テスト一覧を表示",
+        explain: "トップページに課題・テスト一覧を表示する機能を追加しました。",
+      },
+    ],
+  },
+  {
     version: "4.1.5",
     description: ["ScombZ Utilities v4.1.5では、バグ修正を行いました。"],
     released: true,
     date: {
       firefox: "2024/8/6",
       chrome: "2024/8/6",
+      edge: "2024/8/9",
     },
     contents: [
       {
