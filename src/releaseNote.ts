@@ -15,6 +15,29 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.2.1",
+    description: ["ScombZ Utilities v4.2.1では、表示の調整を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/8/27",
+      chrome: "2024/8/27",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "自作課題追加ボタンの表示位置変更",
+        explain:
+          "各科目ごとのページに表示される自作課題追加ボタンの位置が、TAや教員向けに表示されるボタンの位置と被ってしまっていた問題を修正しました。表示位置を左下から右下に変更しました。",
+      },
+      {
+        genre: "optimization",
+        title: "英訳の修正",
+        explain:
+          "一部の英訳が不適切だったため、修正を行いました。また、適切に表示されなかった部分を修正しました。",
+      },
+    ],
+  },
+  {
     version: "4.2.0",
     description: ["ScombZ Utilities v4.2.0では、機能の追加を行いました。"],
     released: true,
