@@ -15,6 +15,29 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.2.2",
+    description: ["ScombZ Utilities v4.2.2では、機能の追加を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/10/20",
+      chrome: "2024/10/21",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "時間割の編集機能の追加",
+        explain:
+          "拡張機能によって追加される、メニュー横及びポップアップの時間割を編集する機能を追加しました。 編集では、自動取得した授業の非表示切り替えおよび授業の追加を行うことができます。 機能へは、メニュー横時間割表の右上の編集アイコンからアクセスできます。",
+      },
+      {
+        genre: "optimization",
+        title: "FireFox版オプションの設定項目拡張",
+        explain:
+          "FireFox版のオプションページから設定できる項目を大幅に増やしました。",
+      },
+    ],
+  },
+  {
     version: "4.2.1",
     description: ["ScombZ Utilities v4.2.1では、表示の調整を行いました。"],
     released: true,
