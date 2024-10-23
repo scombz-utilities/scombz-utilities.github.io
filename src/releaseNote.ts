@@ -15,7 +15,7 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
-    version: "4.2.3",
+    version: "4.3.0",
     description: [
       "ScombZ Utilities v4.2.3では、機能の追加・調整及び不具合の修正を行いました。",
     ],
