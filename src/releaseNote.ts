@@ -22,7 +22,7 @@ export const releaseNotes: ReleaseNote[] = [
     released: true,
     date: {
       firefox: "2024/10/23",
-      chrome: "2024/10/23",
+      chrome: "2024/10/24",
     },
     contents: [
       {
@@ -48,6 +48,25 @@ export const releaseNotes: ReleaseNote[] = [
         title: "シラバスへのリンクの精度向上",
         explain:
           "科目ページ上部に存在するシラバスリンクの精度を向上させました。",
+      },
+    ],
+  },
+  {
+    version: "4.2.3",
+    description: [
+      "ScombZ Utilities v4.2.3は、リリース作業において問題が発生したため、すぐにv4.3.0にアップデートされます。",
+    ],
+    released: false,
+    date: {
+      firefox: "2024/10/23",
+      chrome: "2024/10/23",
+    },
+    contents: [
+      {
+        genre: "others",
+        title: "リリースの不具合",
+        explain:
+          "このバージョンのリリースには、本来公開するはずであった機能が含まれませんでした。そのため、すぐに修正版のv4.3.0がリリースされます。通常使用する分には問題はありません。",
       },
     ],
   },
