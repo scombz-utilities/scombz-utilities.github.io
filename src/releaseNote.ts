@@ -15,6 +15,43 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.2.3",
+    description: [
+      "ScombZ Utilities v4.2.3では、機能の追加・調整及び不具合の修正を行いました。",
+    ],
+    released: true,
+    date: {
+      firefox: "2024/10/23",
+      chrome: "2024/10/23",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "時間割の編集画面がはみ出す問題の修正",
+        explain:
+          "時間割の編集画面が画面をはみ出すことがある問題を修正しました。",
+      },
+      {
+        genre: "feature",
+        title: "アンケート全表示機能の追加",
+        explain:
+          "メニュー画面、トップページなどに表示される課題一覧に、回答受付中である全てのアンケートを表示する機能を追加しました。この機能をオンにすると、科目ごとの設定によらず全てのアンケートが課題として表示されるようになります。",
+      },
+      {
+        genre: "optimization",
+        title: "設定画面のダークモード対応",
+        explain:
+          "ScombZ Utilitiesのダークモードを有効化した際に、設定画面もダークモードになるように変更しました。",
+      },
+      {
+        genre: "optimization",
+        title: "シラバスへのリンクの精度向上",
+        explain:
+          "科目ページ上部に存在するシラバスリンクの精度を向上させました。",
+      },
+    ],
+  },
+  {
     version: "4.2.2",
     description: ["ScombZ Utilities v4.2.2では、機能の追加を行いました。"],
     released: true,
