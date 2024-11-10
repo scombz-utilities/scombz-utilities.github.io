@@ -15,6 +15,29 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.3.1",
+    description: ["ScombZ Utilities v4.2.3では、表示の調整正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/11/10",
+      chrome: "2024/11/10",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "設定画面のロゴの色を変更",
+        explain:
+          "設定画面のの後の色がライトモードであってもダークモードのものが適用される不具合を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "トップ画面の表示順序変更",
+        explain:
+          "課題一覧をScombZからのお知らせよりも上に表示するように変更しました。",
+      },
+    ],
+  },
+  {
     version: "4.3.0",
     description: [
       "ScombZ Utilities v4.2.3では、機能の追加・調整及び不具合の修正を行いました。",
