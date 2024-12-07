@@ -15,6 +15,37 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.3.2",
+    description: [
+      "ScombZ Utilities v4.3.2では、不具合の修正と一部機能の調整を行いました。",
+    ],
+    released: true,
+    date: {
+      firefox: "2024/12/7",
+      chrome: "2024/12/7",
+    },
+    contents: [
+      {
+        genre: "optimization",
+        title: "一部設定項目の調整",
+        explain:
+          "ログインIDの形式が推奨のものでなくとも、強制的に保存を行うことができるように変更しました。",
+      },
+      {
+        genre: "fix",
+        title: "ログイン前お知らせの取得バグの修正",
+        explain:
+          "ログイン前のお知らせの取得がうまく行かないことがある問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "ログイン無限ループバグの修正",
+        explain:
+          "パスワードが間違っている際に、ログインが無限ループに陥る問題を修正しました。",
+      },
+    ],
+  },
+  {
     version: "4.3.1",
     description: ["ScombZ Utilities v4.2.3では、表示の調整正を行いました。"],
     released: true,
