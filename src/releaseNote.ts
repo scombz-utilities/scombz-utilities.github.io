@@ -15,33 +15,27 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
-    version: "4.3.2",
+    version: "4.3.3",
     description: [
-      "ScombZ Utilities v4.3.2では、不具合の修正と一部機能の調整を行いました。",
+      "ScombZ Utilities v4.3.3では、機能の追加と不具合の修正を行いました。",
     ],
     released: true,
     date: {
-      firefox: "2024/12/7",
-      chrome: "2024/12/7",
+      firefox: "2024/12/20",
+      chrome: "2024/12/20",
     },
     contents: [
       {
-        genre: "optimization",
-        title: "一部設定項目の調整",
+        genre: "feature",
+        title: "学修の手引きを開くボタンの追加",
         explain:
-          "ログインIDの形式が推奨のものでなくとも、強制的に保存を行うことができるように変更しました。",
+          "S*gsotにログインした際に、自分の入学年度・学部に応じて適切な「学修の手引き」を開くボタンが表示される機能を追加しました。",
       },
       {
         genre: "fix",
-        title: "ログイン前お知らせの取得バグの修正",
+        title: "S*gsotで学番自動入力が行えないことがある問題の修正",
         explain:
-          "ログイン前のお知らせの取得がうまく行かないことがある問題を修正しました。",
-      },
-      {
-        genre: "fix",
-        title: "ログイン無限ループバグの修正",
-        explain:
-          "パスワードが間違っている際に、ログインが無限ループに陥る問題を修正しました。",
+          "S*gsotで、http通信（非https）の場合に学籍番号自動入力が行えないことがある問題を修正しました。",
       },
     ],
   },
