@@ -146,6 +146,21 @@ const functionCards: FunctionCard[] = [
       "例えば、一番上に最新回の教材を表示させることができたり、初回の教材を固定表示させることもできます。",
     ],
   },
+  {
+    title: "1クリックでキャッシュクリア",
+    description: [
+      "ScombZのメンテナンスが終わっても、キャッシュが残っていると接続できないことがあります。",
+      "ScombZ Utilitiesでは1クリックでキャッシュをクリアできます。",
+    ],
+    image: "/about/clearCache.png",
+  },
+  {
+    title: "1クリックで学修の手引きを開く",
+    description: [
+      "S*gsotにログインすれば、1クリックであなたの入学年度・学部の「学修の手引き」を開くことができます。",
+    ],
+    image: "/about/sgsot.png",
+  },
 ];
 
 export const FunctionsTile = () => {
