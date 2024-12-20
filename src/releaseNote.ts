@@ -15,6 +15,23 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.3.4",
+    description: ["ScombZ Utilities v4.3.4では、機能の追加を行いました。"],
+    released: true,
+    date: {
+      firefox: "2024/12/21",
+      chrome: "2024/12/21",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "キャッシュクリア機能の追加",
+        explain:
+          "ScombZのメンテナンスが終わってもリダイレクトされてしまう際、リダイレクト先の学情ページで簡単にキャッシュクリアを行うことができる機能を追加しました。",
+      },
+    ],
+  },
+  {
     version: "4.3.3",
     description: [
       "ScombZ Utilities v4.3.3では、機能の追加と不具合の修正を行いました。",
