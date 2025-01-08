@@ -15,6 +15,23 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.0",
+    description: ["ScombZ Utilities v4.4.0では、機能の追加を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/1/8",
+      chrome: "2025/1/8",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "Google Classroom連携機能の追加",
+        explain:
+          "Google Classroomと連携し、Google Classroomに登録されている課題の情報を取得し、ScombZ Utilities上で表示する機能を追加しました。連携は拡張機能の設定画面から行うことができます。",
+      },
+    ],
+  },
+  {
     version: "4.3.4",
     description: ["ScombZ Utilities v4.3.4では、機能の追加を行いました。"],
     released: true,
