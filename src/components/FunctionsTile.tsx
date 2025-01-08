@@ -161,6 +161,13 @@ const functionCards: FunctionCard[] = [
     ],
     image: "/about/sgsot.png",
   },
+  {
+    title: "Google Classroomと連携",
+    description: [
+      "学番Googleアカウントでログインすると、Google Classroomの課題をScombZ内で確認できます。(Chromeのみ)",
+    ],
+    image: "/about/gc.png",
+  },
 ];
 
 export const FunctionsTile = () => {
