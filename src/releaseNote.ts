@@ -29,6 +29,12 @@ export const releaseNotes: ReleaseNote[] = [
         explain:
           "Google Classroomと連携し、Google Classroomに登録されている課題の情報を取得し、ScombZ Utilities上で表示する機能を追加しました。連携は拡張機能の設定画面から行うことができます。",
       },
+      {
+        genre: "fix",
+        title: "バッジの表示が正しく起きない問題の修正",
+        explain:
+          "拡張機能のアイコンをクリックした際に、バッジを更新するように変更しました。",
+      },
     ],
   },
   {
