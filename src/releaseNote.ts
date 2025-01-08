@@ -15,6 +15,29 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.2",
+    description: ["ScombZ Utilities v4.4.2では、機能の修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/1/8",
+      chrome: "2025/1/8",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "Google Classroom連携機能の修正",
+        explain:
+          "課題一覧を更新しても、Classroomの課題が直後に反映されないことがある問題を修正しました。",
+      },
+      {
+        genre: "fix",
+        title: "Google Classroom連携機能の修正",
+        explain:
+          "Classroomでの無期限の課題を、1年先の課題として表示するようにしました。",
+      },
+    ],
+  },
+  {
     version: "4.4.1",
     description: ["ScombZ Utilities v4.4.1では、機能の修正を行いました。"],
     released: true,
