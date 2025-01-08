@@ -15,6 +15,23 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.1",
+    description: ["ScombZ Utilities v4.4.0では、機能の修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/1/8",
+      chrome: "2025/1/8",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "Google Classroom連携機能の修正",
+        explain:
+          "Google Chromeを開き直すごとに、Googleにログインを求められてしまう問題を修正しました。",
+      },
+    ],
+  },
+  {
     version: "4.4.0",
     description: ["ScombZ Utilities v4.4.0では、機能の追加を行いました。"],
     released: true,
@@ -29,6 +46,23 @@ export const releaseNotes: ReleaseNote[] = [
         explain:
           "Google Classroomと連携し、Google Classroomに登録されている課題の情報を取得し、ScombZ Utilities上で表示する機能を追加しました。連携は拡張機能の設定画面から行うことができます。",
       },
+      {
+        genre: "fix",
+        title: "バッジの表示が正しく起きない問題の修正",
+        explain:
+          "拡張機能のアイコンをクリックした際に、バッジを更新するように変更しました。",
+      },
+    ],
+  },
+  {
+    version: "4.3.5",
+    description: ["ScombZ Utilities v4.4.0では、機能の修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/1/8",
+      chrome: "2025/1/8",
+    },
+    contents: [
       {
         genre: "fix",
         title: "バッジの表示が正しく起きない問題の修正",
