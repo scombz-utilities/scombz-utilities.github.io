@@ -15,6 +15,25 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.4",
+    description: [
+      "ScombZ Utilities v4.4.4では、機能の修正を行いました。このバージョンはFireFoxのみのリリースです。",
+    ],
+    released: true,
+    date: {
+      firefox: "2025/1/11",
+      chrome: "2025/1/11",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "課題取得に失敗する問題の修正",
+        explain:
+          "課題更新ボタンを押すと、課題の取得時にエラーが出る問題を修正しました。なお、既存のバージョンではエラーが出るものの取得後にリロードを行うことで表示の更新を行えます。",
+      },
+    ],
+  },
+  {
     version: "4.4.3",
     description: [
       "ScombZ Utilities v4.4.3では、機能の調整と追加を行いました。",
