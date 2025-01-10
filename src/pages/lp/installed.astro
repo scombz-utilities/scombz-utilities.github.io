@@ -1,0 +1,404 @@
+---
+import { css } from "../../../styled-system/css";
+import "../../index.css";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource-variable/noto-sans-jp";
+import "@fontsource-variable/montserrat";
+import TopSwiper from "../../components/TopSwiper.astro";
+import FunctionsColumn from "../../components/FunctionsColumn.astro";
+import InfinitySwiper from "../../components/InfinitySwiper.astro";
+---
+
+<Layout title="ScombZ Utilities">
+  <main>
+    <div
+      class={css({
+        marginBottom: 20,
+        position: "relative",
+        height: "calc(100vw - 60px)",
+        md: {
+          height: "calc(100vh - 80px)",
+          boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
+        },
+        overflow: "hidden",
+      })}
+    >
+      <div
+        class={css({
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 0,
+          filter: "blur(4px)",
+          height: "100%",
+          width: "100%",
+          display: "none",
+          md: { display: "block" },
+        })}
+      >
+        <TopSwiper />
+      </div>
+      <div
+        class={css({
+          position: "absolute",
+          bottom: "5vh",
+          left: "0",
+          width: "100%",
+          textAlign: "center",
+          color: "#444",
+          fontWeight: 400,
+          fontSize: "1.6rem",
+          letterSpacing: "0.1em",
+          filter: "drop-shadow(0 0 10px #fff)",
+          animation: "scroll 3s infinite",
+          display: "none",
+          md: { display: "block" },
+        })}
+      >
+        - SCROLL -
+      </div>
+      <div
+        class={css({
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1,
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "#fff9",
+          px: "5vw",
+          py: "10vh",
+          md: {
+            textAlign: "center",
+            alignItems: "center",
+            py: "28vh",
+          },
+        })}
+      >
+        <h1
+          class={css({
+            fontWeight: 600,
+            color: "#646765",
+            fontFamily: "Noto Sans JP, sans-serif",
+            mb: "2vh",
+            fontSize: "10vw",
+            md: {
+              fontSize: "4.5vw",
+            },
+          })}
+        >
+          <span
+            class={css({
+              display: "block",
+              background:
+                "linear-gradient(120deg, rgba(31, 159, 48, 1) 0%, rgba(127, 204, 160, 1) 19%, rgba(70, 161, 152, 1) 71%, rgba(217, 101, 112, 1) 100%)",
+              backgroundClip: "text",
+              color: "transparent",
+              fontWeight: 600,
+              fontFamily: "montserrat, sans-serif",
+              md: {
+                display: "inline-block",
+              },
+            })}
+          >
+            ScombZ Utilities
+          </span>
+          へようこそ！
+        </h1>
+        <p
+          class={css({
+            md: { fontSize: "1.8vw" },
+            fontWeight: 400,
+            color: "#343735",
+            fontFamily: "Noto Sans JP, sans-serif",
+          })}
+        >
+          ScombZ Utilitiesをインストールしていただき、ありがとうございます！！
+        </p>
+        <p
+          class={css({
+            md: { fontSize: "1.8vw" },
+            fontWeight: 400,
+            color: "#343735",
+            fontFamily: "Noto Sans JP, sans-serif",
+          })}
+        >
+          ScombZに加わった、新しいデザイン、新しい機能、新しい使い方をご確認ください！！
+        </p>
+      </div>
+    </div>
+    <div
+      class={css({
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "3rem",
+        md: {
+          width: "80%",
+        },
+        maxWidth: "1280px",
+        margin: "auto",
+        mb: "2rem",
+        fontSize: "1.2rem",
+      })}
+    >
+      <h2
+        class={css({
+          textAlign: "center",
+          fontSize: "1.8rem",
+          fontWeight: 600,
+          fontFamily: "Noto Sans JP, sans-serif",
+          color: "#646765",
+          margin: "2rem auto",
+        })}
+      >
+        主な変更点
+      </h2>
+      <FunctionsColumn
+        noBoxShadow
+        title="新しくなった独自ウィジェット"
+        description={[
+          "ScombZ Utilitiesは、メニュー横にウィジェットを追加します。",
+          "すぐにアクセスできる時間割、課題一覧、メモ機能だけでなく、さらに複数のウィジェットを追加しました。",
+          "UIも大幅に変更し、誰でも慣れ親しんだ使いやすさを重視しました。",
+        ]}
+        image="/about/widget.png"
+        direction="right"
+      />
+      <FunctionsColumn
+        noBoxShadow
+        title="刷新したポップアップ"
+        description={[
+          "ScombZ Utilitiesのアイコンを固定化することで、どんなWebサイトを閲覧していてもすぐにポップアップを開けます。",
+          "時間割や、課題一覧にすぐにアクセスすることができます。",
+        ]}
+        image="/about/popup.png"
+        direction="left"
+      />
+      <FunctionsColumn
+        noBoxShadow
+        title="UXに配慮した設定画面"
+        description={[
+          "設定画面は、誰もが使いやすいデザインです。",
+          "タブを使用した分類、統一感のあるデザイン、使いやすさを重視した機能を重視しました。",
+        ]}
+        image="/about/settings.png"
+        direction="right"
+      />
+    </div>
+    <div
+      class={css({
+        backgroundColor: "#f9f9f9",
+        padding: "1rem 0",
+        mt: "6rem",
+        mb: "2rem",
+      })}
+    >
+      <h2
+        class={css({
+          textAlign: "center",
+          fontSize: "1.8rem",
+          fontWeight: 600,
+          fontFamily: "Noto Sans JP, sans-serif",
+          color: "#646765",
+          margin: "2rem auto",
+        })}
+      >
+        詳細な新機能の紹介
+      </h2>
+      <InfinitySwiper
+        slides={[
+          {
+            title: "オリジナルの時間割",
+            description: [
+              "時間割の表示が見やすくなりました。",
+              "表示コマ数や曜日は自動で調整され、授業時間も表示されます",
+            ],
+            imgSrc: "/lp/timetableTask.png",
+          },
+          {
+            title: "時間割日別表示",
+            description: [
+              "日別に時間割を表示できるようになりました。",
+              "ウィンドウの幅が狭くても、見やすく表示されます。",
+            ],
+            imgSrc: "/lp/dayTimeTable.png",
+          },
+          {
+            title: "秒数表示された時計",
+            description: [
+              "時間割上部に表示する日付は、秒数単位の時計にも変更できます。",
+              "テストの開始時刻や、授業の終了時刻を確認するのに便利です。",
+            ],
+            imgSrc: "/lp/seconds.gif",
+          },
+          {
+            title: "全てを見られる課題一覧",
+            description: [
+              "今までの課題一覧では、一定以上の課題数になると表示が切れてしまっていました。",
+              "新しい課題一覧では、ページネーションによって全ての課題を見ることができます。",
+            ],
+            imgSrc: "/lp/taskPagination.gif",
+          },
+          {
+            title: "新しくなったメモ帳",
+            description: [
+              "メモ帳は入力のしやすさを重視しました。",
+              "1行ごとのリマインダーのような使い方に適しています。",
+            ],
+            imgSrc: "/lp/note.png",
+          },
+          {
+            title: "新ウィジェット リンク集",
+            description: [
+              "リンク集には、カード形式で様々なページを追加できます。",
+              "自由に追加や削除をすることができ、よく使うリンクをまとめることができます。",
+            ],
+            imgSrc: "/lp/links.png",
+          },
+          {
+            title: "新ウィジェット バス時刻表",
+            description: [
+              "大宮キャンパス・東大宮駅間の学バスの時刻表をすぐに確認できます。",
+              "すでに出発したバスは薄く表示され、次のバスがひと目でわかります。",
+              "標準は大宮キャンパス発が表示されますが、1クリックで東大宮駅発にも変更できます。",
+            ],
+            imgSrc: "/lp/bus.png",
+          },
+          {
+            title: "新ウィジェット カレンダー",
+            description: [
+              "カレンダーはScombZトップのカレンダーと連動しています。",
+              "簡単な学年歴や、課題の提出期限が表示されます。",
+            ],
+            imgSrc: "/lp/calendar.png",
+          },
+          {
+            title: "ウィジェットの表示設定",
+            description: [
+              "ウィジェットの表示設定は、設定画面のウィジェット設定タブから変更できます。",
+              "表示するウィジェットを選択したり、表示順を変更することができます。",
+            ],
+            imgSrc: "/lp/widgetOption.png",
+          },
+          {
+            title: "ESCキーで閉じる",
+            description: [
+              "ウィジェットやサイドメニューは、ESCキーで閉じることができます。",
+            ],
+          },
+          {
+            title: "英語に対応",
+            description: [
+              "ScombZ Utilitiesは、英語にも対応しました。",
+              "言語設定はブラウザの言語設定に従います。",
+            ],
+            imgSrc: "/about/i18n.png",
+          },
+          {
+            title: "右クリック/ホイールクリック",
+            description: [
+              "LMSページ内の科目ボタン、科目別ページのダウンロードリンクなど、右クリックが通常できないリンクを通常のリンクと同じようにサポートします。",
+            ],
+            imgSrc: "/about/contextMenu.png",
+          },
+          {
+            title: "シラバスの学科保存",
+            description: [
+              "シラバスの入学年度・学科を保存し、簡単にシラバスを閲覧できるようにします。",
+            ],
+            imgSrc: "/about/syllabus.png",
+          },
+          {
+            title: "教員へのメール送信",
+            description: [
+              "科目別ページの教員情報から、教員へのメール送信がより簡単にできるようになりました。",
+              "コピーボタンとGmailボタンがそれぞれ追加され、クリックするだけでメール送信画面を開けます。",
+            ],
+            imgSrc: "/about/mail.png",
+          },
+          {
+            title: "クイックメニュー",
+            description: [
+              "科目別ページ上部に表示されるクイックメニューを追加しました。",
+              "ページ内コンテンツへ1クリックで移動できるようになります。",
+            ],
+            imgSrc: "/about/quickmenu.png",
+          },
+        ]}
+      />
+      <a
+        href="/about"
+        class={css({
+          textAlign: "center",
+          display: "block",
+          borderRadius: ".5rem",
+          color: "{colors.indigo.700}",
+          transition: "all 0.2s",
+          py: ".5rem",
+          px: "4rem",
+          mb: "2rem",
+          width: "fit-content",
+          margin: "auto",
+          border: "1px solid {colors.indigo.700}",
+          "&:hover": {
+            backgroundColor: "{colors.indigo.700}",
+            color: "#fff",
+          },
+        })}>機能詳細はこちら</a
+      >
+    </div>
+    <a
+      href="/release/4.0.0"
+      class={css({
+        textAlign: "center",
+        display: "block",
+        borderRadius: ".5rem",
+        color: "{colors.indigo.700}",
+        transition: "all 0.2s",
+        py: ".5rem",
+        px: "4rem",
+        my: "2rem",
+        width: "fit-content",
+        margin: "auto",
+        border: "1px solid {colors.indigo.700}",
+        "&:hover": {
+          backgroundColor: "{colors.indigo.700}",
+          color: "#fff",
+        },
+      })}>v4.0.0 リリースノート</a
+    >
+  </main>
+
+  <style>
+    main {
+      margin: 0 auto;
+    }
+
+    /* スライドの動き等速 */
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    /* 画像のサイズ調整 */
+    .swiper-slide img {
+      height: auto;
+      width: 100%;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</Layout>
