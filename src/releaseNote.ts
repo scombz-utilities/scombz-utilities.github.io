@@ -15,6 +15,25 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.3",
+    description: [
+      "ScombZ Utilities v4.4.3では、機能の調整と追加を行いました。",
+    ],
+    released: true,
+    date: {
+      firefox: "2025/1/11",
+      chrome: "2025/1/11",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "トップページレイアウトの調整",
+        explain:
+          "トップページ下部のリンク一覧について、表示の調整を行いました。",
+      },
+    ],
+  },
+  {
     version: "4.4.2",
     description: ["ScombZ Utilities v4.4.2では、機能の修正を行いました。"],
     released: true,
