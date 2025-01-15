@@ -15,6 +15,29 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.5",
+    description: ["ScombZ Utilities v4.4.5では、機能の追加を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/1/16",
+      chrome: "2025/1/16",
+    },
+    contents: [
+      {
+        genre: "feature",
+        title: "複数ファイル同時提出機能の追加",
+        explain:
+          "複数のファイルを選択して同時に提出できる機能を追加しました。クリックしてファイルを選択するか、ドラッグ&ドロップが行えます。またこの機能の実装に伴い、ドラッグ&ドロップへの自動切り替え機能を削除しました。",
+      },
+      {
+        genre: "optimization",
+        title: "ポップアップ画面の初期タブ設定を追加",
+        explain:
+          "ポップアップ画面を開いたときに最初に表示されるタブを設定できるようにしました。設定画面から変更できます。",
+      },
+    ],
+  },
+  {
     version: "4.4.4",
     description: [
       "ScombZ Utilities v4.4.4では、機能の修正を行いました。このバージョンはFireFoxのみのリリースです。",
