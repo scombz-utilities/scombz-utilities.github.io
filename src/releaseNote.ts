@@ -15,6 +15,23 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.6",
+    description: ["ScombZ Utilities v4.4.6では、機能の修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/3/30",
+      chrome: "2025/3/30",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "学修の手引きURLの変更への対応",
+        explain:
+          "2025年度入学の学生向けの学修の手引きのURLが2024年度入学以前のものから全学部で変更されたため、S*gsotに表示されるボタンのURLを変更する対応を行ないました。また対応する手引きが見つからなかった場合、一覧にリダイレクトされるようになりました。",
+      },
+    ],
+  },
+  {
     version: "4.4.5",
     description: ["ScombZ Utilities v4.4.5では、機能の追加を行いました。"],
     released: true,
