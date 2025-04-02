@@ -15,6 +15,23 @@ export type ReleaseNote = {
 };
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: "4.4.7",
+    description: ["ScombZ Utilities v4.4.6では、機能の修正を行いました。"],
+    released: true,
+    date: {
+      firefox: "2025/4/2",
+      chrome: "2025/4/2",
+    },
+    contents: [
+      {
+        genre: "fix",
+        title: "学修の手引きで履修申請ボタンが押せない問題への対処",
+        explain:
+          "学習の手引きで、履修申請ボタンの前に拡張機能のボタンが出てくる問題で、拡張機能のボタンを非表示にするCloseボタンを追加しました。",
+      },
+    ],
+  },
+  {
     version: "4.4.6",
     description: ["ScombZ Utilities v4.4.6では、機能の修正を行いました。"],
     released: true,
