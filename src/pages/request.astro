@@ -27,19 +27,35 @@ import "../index.css";
         class={css({
           listStyle: "inside",
           padding: 0,
-          margin: 0,
           gap: "1rem",
+          textAlign: "left",
+          width: "70%",
+          maxWidth: "600px",
+          minWidth: "300px",
+          margin: "0 auto",
         })}
       >
         <li>
           <a
             class={css({
-              color: "{colors.indigo.700}",
-              textDecoration: "underline",
+              // color: "{colors.indigo.700}",
+              color: "gray",
+              textDecoration: "underline line-through",
+              cursor: "not-allowed",
             })}
+            aria-disabled={true}
+            onclick="return false;"
             href="https://docs.google.com/forms/d/e/1FAIpQLSeahBs8kcBB2dVmVA54KIIOxa4DKUE8v4a1E30ncawd9W4vjg/viewform"
             >Google Form</a
           >
+          <p
+            class={css({
+              fontSize: "0.8rem",
+              color: "gray",
+            })}
+          >
+            （受付は終了しました。GitHub Issuesをご利用ください。）
+          </p>
         </li>
         <li>
           <a
